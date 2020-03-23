@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WinSym-WorkspaceFile FileVersion="1" ProductVersion="5.6.0">
+	<!--** DO NOT EDIT **-->
+	<Projects>
+		<Project>
+			<Name>Heimdall4</Name>
+			<Location>.\Heimdall4\Heimdall4.wsp</Location>
+		</Project>
+	</Projects>
+</WinSym-WorkspaceFile>

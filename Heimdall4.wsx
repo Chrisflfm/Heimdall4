@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WORKSPACE_OPTIONS>
+  <Version>1_0</Version>
+  <Projects>
+    <ActiveProject>Heimdall4</ActiveProject>
+    <Project>
+      <Name>Heimdall4</Name>
+      <ActiveConfiguration>Release</ActiveConfiguration>
+      <Configurations>
+        <Configuration>
+          <Name>Release</Name>
+          <ForceRebuild>1</ForceRebuild>
+          <AxesVerified>1</AxesVerified>
+          <CreateDAFile>0</CreateDAFile>
+          <DownloadDAFile>0</DownloadDAFile>
+          <CreateExportFile>0</CreateExportFile>
+          <MonitorTask>0</MonitorTask>
+          <DataDump>
+            <CurrentGroupName />
+            <ApplyChanges>1</ApplyChanges>
+            <DownloadFilename />
+            <UploadFilename />
+            <OverwriteExisting>0</OverwriteExisting>
+            <ForceOldDAFormat>0</ForceOldDAFormat>
+            <OpenDocumentAfterUpload>1</OpenDocumentAfterUpload>
+          </DataDump>
+        </Configuration>
+      </Configurations>
+    </Project>
+  </Projects>
+  <Breakpoints />
+  <Bookmarks />
+  <ChildFrames>
+    <Document>
+      <ViewFrame>
+        <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
+        <ViewScrollHoriz>0</ViewScrollHoriz>
+        <ViewScrollVert>491</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
+        <Line>529</Line>
+        <Column>20</Column>
+      </ViewFrame>
+    </Document>
+  </ChildFrames>
+  <ExpandedTreenodes>
+    <Treenode>
+      <Location>Heimdall4</Location>
+    </Treenode>
+    <Treenode>
+      <Location>Heimdall4/Program</Location>
+    </Treenode>
+    <Treenode>
+      <Location>Heimdall4/System Files</Location>
+    </Treenode>
+  </ExpandedTreenodes>
+  <ExpandedTreeNodesHWM>
+    <Location>Heimdall4 System</Location>
+    <Location>Heimdall4 System/Release</Location>
+    <Location>Heimdall4 System/Release/Hardware</Location>
+    <Location>Heimdall4 System/Release/Hardware/Network</Location>
+    <Location>Heimdall4 System/Release/Hardware/Network/JC-340</Location>
+  </ExpandedTreeNodesHWM>
+</WORKSPACE_OPTIONS>

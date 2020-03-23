@@ -1,0 +1,636 @@
+Var
+// *********************In en outputs*********************************
+//Digitaal Input
+	ctV1Dicht:		Bool	at %IX 100000101; //Venster 1 dicht
+	ctV2Dicht:		Bool	at %IX 100000102; //Venster 2 dicht
+	ctV3Dicht:		Bool	at %IX 100000103; //Venster 3 dicht
+	ctV4Dicht:		Bool	at %IX 100000104; //Vensteer4 dicht
+	ctV5Dicht:		Bool	at %IX 100000105; //Venster 5 dicht
+	ctV6Dicht:		Bool	at %IX 100000106; //Venster 6 dicht
+	ctV7Dicht:		Bool	at %IX 100000107; //Venster 7 dicht
+	ctV8Dicht:		Bool	at %IX 100000108; //Venster 8 dicht
+	ctV9Dicht:		Bool	at %IX 100000109; //Venster 9 dicht
+	ctV10Dicht:		Bool	at %IX 100000110; //Venster 10 dicht
+	ctV11Dicht:		Bool	at %IX 100000111; //Venster 11 dicht
+	ctV12Dicht:		Bool	at %IX 100000112; //Venster 12 dicht
+	ctV13Dicht:		Bool	at %IX 100000113; //Venster 13 dicht
+	ctV14Dicht:		Bool	at %IX 100000114; //Venster 14 dicht
+	ctV15Dicht:		Bool	at %IX 100000115; //Venster 15 dicht
+	ctV16Dicht:		Bool	at %IX 100000116; //Venster 16 dicht
+	
+	ctV17Dicht:		Bool	at %IX 100000201; //Venster 17 dicht
+	ctV18Dicht:		Bool	at %IX 100000202; //Venster 18 dicht
+	ctRegen1:		Bool	at %IX 100000203; //Regensensor nr 1
+	ctRegen2:		Bool	at %IX 100000204; //Regensensor nr 2
+	ctSchemer:		Bool	at %IX 100000205; //Schemerschakelaar
+	ctAlarmAan:		Bool	at %IX 100000206; //Alarm ingeschakeld
+	ctAlarmUit:		Bool	at %IX 100000207; //Alarm uitgeschakeld
+	ctBrand:		Bool	at %IX 100000208; //Brand
+	ctInbraak:		Bool	at %IX 100000209; //Inbraak TOM
+	ctDeurPlatina:	Bool	at %IX 100000210; //Deur luifel Platina open
+	ctPoortDicht:	Bool	at %IX 100000211; //Buiten poort dicht
+	ctZoutLaag:		Bool	at %IX 100000212; //Laag zoutniveau ontharder
+	ctZoutVatLek:	Bool	at %IX 100000213; //Lek in zoutvat ontharder
+	Reserve1:		Bool	at %IX 100000214; //Reserve
+	Reserve2:		Bool	at %IX 100000215; //Reserve
+	Reserve3:		Bool	at %IX 100000216; //Reserve
+	
+	
+//Digitaal Output	
+	hrVenster1:		Bool	at %QX 100000301; //Venster 1 activeren
+	hrVenster2:		Bool	at %QX 100000302; //Venster 2 activeren
+	hrVenster3:		Bool	at %QX 100000303; //Venster 3 activeren
+	hrVenster4:		Bool	at %QX 100000304; //Venster 4 activeren
+	hrVenster5:		Bool	at %QX 100000305; //Venster 5 activeren
+	hrVenster6:		Bool	at %QX 100000306; //Venster 6 activeren
+	hrVenster7:		Bool	at %QX 100000307; //Venster 7 activeren
+	hrVenster8:		Bool	at %QX 100000308; //Venster 8 activeren
+	hrVenster9:		Bool	at %QX 100000309; //Venster 9 activeren
+	hrVenster10:	Bool	at %QX 100000310; //Venster 10 activeren
+	hrVenster11:	Bool	at %QX 100000311; //Venster 11 activeren
+	hrVenster12:	Bool	at %QX 100000312; //Venster 12 activeren
+	hrVenster13:	Bool	at %QX 100000313; //Venster 13 activeren
+	hrVenster14:	Bool	at %QX 100000314; //Venster 14 activeren
+	hrVenster15:	Bool	at %QX 100000315; //Venster 15 activeren
+	hrVenster16:	Bool	at %QX 100000316; //Venster 16 activeren
+	
+	hrVenster17:	Bool	at %QX 100000401; //Venster 17 activeren
+	hrVenster18:	Bool	at %QX 100000402; //Venster 18 activeren
+	hrZonnewering1:	Bool	at %QX 100000403; //Zonnewering 1 activeren
+	hrZonnewering3:	Bool	at %QX 100000404; //Zonnewering 1 activeren
+	hrZonnewering4:	Bool	at %QX 100000405; //Zonnewering 1 activeren
+	hrZonnewering5:	Bool	at %QX 100000406; //Zonnewering 1 activeren
+	hrZonnewering6:	Bool	at %QX 100000407; //Zonnewering 1 activeren
+	hrZonnewering12:Bool	at %QX 100000408; //Zonnewering 1 activeren
+	hrZonnewering13:Bool	at %QX 100000409; //Zonnewering 1 activeren
+	hrZonnewering15:Bool	at %QX 100000410; //Zonnewering 1 activeren
+	hrZonnewering16:Bool	at %QX 100000411;//Zonnewering 1 activeren
+	hrZonnewering17:Bool	at %QX 100000412;//Zonnewering 1 activeren
+	hrOpenDicht:	Bool	at %QX 100000413;//Polariteit omschakelen
+	hrLampenTom:	Bool	at %QX 100000414;//Lampen op terrein TOM
+	hrLampenPlatina:Bool	at %QX 100000415;//Lampen op terrein Platina + Industrieweg
+	hrPoortTom:		Bool	at %QX 100000416;//Poort Tom open/dicht
+
+//**********************Heimdall registers******************************
+//Temperaturen
+	ruimte_0.4-1_B2: 	Int		at %vl 1000100; //Temperatuur waarde van Heimdall
+	ruimte_0.4-2_B3: 	Int		at %vl 1000101; //Temperatuur waarde van Heimdall
+	ruimte_0.9-2_B4: 	Int		at %vl 1000102; //Temperatuur waarde van Heimdall
+	ruimte_0.6-1_B5: 	Int		at %vl 1000103; //Temperatuur waarde van Heimdall
+	ruimte_0.6-2_B6: 	Int		at %vl 1000104; //Temperatuur waarde van Heimdall
+	ruimte_0.8-1_B7: 	Int		at %vl 1000105; //Temperatuur waarde van Heimdall
+	ruimte_0.8-2_B8: 	Int		at %vl 1000106; //Temperatuur waarde van Heimdall
+	ruimte_0.9-1_B9: 	Int		at %vl 1000107; //Temperatuur waarde van Heimdall
+	Kasttemp1_B10: 		Int		at %vl 1000108; //Temperatuur waarde van Heimdall
+	KastTempK2: 		Int		at %vl 1000109; //Temperatuur waarde van Heimdall
+	ruimte_0.2-1_B20: 	Int		at %vl 1000110; //Temperatuur waarde van Heimdall
+	ruimte_0.2-2_B21: 	Int		at %vl 1000111; //Temperatuur waarde van Heimdall
+	ruimte_0.14-1_B22: 	Int		at %vl 1000112; //Temperatuur waarde van Heimdall
+	ruimte_0.14-2_B23: 	Int		at %vl 1000113; //Temperatuur waarde van Heimdall
+	ruimte_0.15-1_B24: 	Int		at %vl 1000114; //Temperatuur waarde van Heimdall
+	ruimte_0.15-2_B25: 	Int		at %vl 1000115; //Temperatuur waarde van Heimdall
+	ruimte_1.11_B29: 	Int		at %vl 1000116; //Temperatuur waarde van Heimdall
+	ruimte_1.10-1_B30: 	Int		at %vl 1000117; //Temperatuur waarde van Heimdall
+	ruimte_1.10-2_B31: 	Int		at %vl 1000118; //Temperatuur waarde van Heimdall
+	ruimte_1.10-3_B32: 	Int		at %vl 1000119; //Temperatuur waarde van Heimdall
+	ruimte_1.1-1_B33: 	Int		at %vl 1000120; //Temperatuur waarde van Heimdall
+	ruimte_1.2-1_B34: 	Int		at %vl 1000121; //Temperatuur waarde van Heimdall
+	ruimte_1.2-2_B35: 	Int		at %vl 1000122; //Temperatuur waarde van Heimdall
+	ruimte_1.3-1_B36: 	Int		at %vl 1000123; //Temperatuur waarde van Heimdall
+	ruimte_1.3-2_B37: 	Int		at %vl 1000124; //Temperatuur waarde van Heimdall
+	ruimte_1.4-1_B38: 	Int		at %vl 1000125; //Temperatuur waarde van Heimdall
+	ruimte_1.7-1_B39: 	Int		at %vl 1000126; //Temperatuur waarde van Heimdall
+	ruimte_1.7-2_B40: 	Int		at %vl 1000127; //Temperatuur waarde van Heimdall
+	KastTemp3_B49: 		Int		at %vl 1000128; //Temperatuur waarde van Heimdall
+	KastTemp4_B50: 		Int		at %vl 1000129; //Temperatuur waarde van Heimdall
+	ruimte_1.9_B51: 	Int		at %vl 1000130; //Temperatuur waarde van Heimdall
+//ActTemp
+	ACTr_0.17_en_0.14: 	Int		at %vl 1000131; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_0.2_0.1:		Int		at %vl 1000132; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_0.5_0.9_Cnv3+4:Int		at %vl 1000133; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_0.4_cnv1+2:	Int		at %vl 1000134; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_0.11_0.12_0.6:	Int		at %vl 1000135; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_0.15:			Int		at %vl 1000136; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.3_cnv5:		Int		at %vl 1000137; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.1_1.4_1.6:	Int		at %vl 1000138; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.2_cnv6:		Int		at %vl 1000139; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_0.8:			Int		at %vl 1000140; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.10_L_cnv7:	Int		at %vl 1000141; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.11:			Int		at %vl 1000142; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.7:			Int		at %vl 1000143; //Actuele zone temperatuur waarde van Heimdall
+	ACTr_1.10_R:		Int		at %vl 1000144; //Actuele zone temperatuur waarde van Heimdall
+//Setpunten
+	SPr_0.17_en_0.14: 	Int		at %vl 1000145; //Setpunt zone voor Heimdall
+	SPr_0.2_0.1:		Int		at %vl 1000146; //Setpunt zone voor Heimdall
+	SPr_0.5_0.9_Cnv3+4:	Int		at %vl 1000147; //Setpunt zone voor Heimdall
+	SPr_0.4_cnv1+2:		Int		at %vl 1000148; //Setpunt zone voor Heimdall
+	SPr_0.11_0.12_0.6:	Int		at %vl 1000149; //Setpunt zone voor Heimdall
+	SPr_0.15:			Int		at %vl 1000150; //Setpunt zone voor Heimdall
+	SPr_1.3_cnv5:		Int		at %vl 1000151; //Setpunt zone voor Heimdall
+	SPr_1.1_1.4_1.6:	Int		at %vl 1000152; //Setpunt zone voor Heimdall
+	SPr_1.2_cnv6:		Int		at %vl 1000153; //Setpunt zone voor Heimdall
+	SPr_0.8:			Int		at %vl 1000154; //Setpunt zone voor Heimdall
+	SPr_1.10_L_cnv7:	Int		at %vl 1000155; //Setpunt zone voor Heimdall
+	SPr_1.11:			Int		at %vl 1000156; //Setpunt zone voor Heimdall
+	SPr_1.7:			Int		at %vl 1000157; //Setpunt zone voor Heimdall
+	SPr_1.10_R:			Int		at %vl 1000158; //Setpunt zone voor Heimdall
+//Opdrachten voor Heimdall
+	KVr_0.17_en_0.14: 	Int		at %vl 1000159; //Koelen/verwarmen zone voor Heimdall
+	KVr_0.2_0.1:		Int		at %vl 1000160; //Koelen/verwarmen zone voor Heimdall
+	KVr_0.5_0.9_Cnv3+4:	Int		at %vl 1000161; //Koelen/verwarmen zone voor Heimdall
+	KVr_0.4_cnv1+2:		Int		at %vl 1000162; //Koelen/verwarmen zone voor Heimdall
+	KVr_0.11_0.12_0.6:	Int		at %vl 1000163; //Koelen/verwarmen zone voor Heimdall
+	KVr_0.15:			Int		at %vl 1000164; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.3_cnv5:		Int		at %vl 1000165; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.1_1.4_1.6:	Int		at %vl 1000166; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.2_cnv6:		Int		at %vl 1000167; //Koelen/verwarmen zone voor Heimdall
+	KVr_0.8:			Int		at %vl 1000168; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.10_L_cnv7:	Int		at %vl 1000169; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.11:			Int		at %vl 1000170; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.7:			Int		at %vl 1000171; //Koelen/verwarmen zone voor Heimdall
+	KVr_1.10_R:			Int		at %vl 1000172; //Koelen/verwarmen zone voor Heimdall
+	Ventileren:			Int		at %vl 1000173; //Ventileren aan (dakvensters open convectoren kleppen open volle snelheid)
+	AllesToe:			Int		at %vl 1000174; //alle dakvensters dicht convectoren kleppen dicht
+	
+	
+//**********************Programma variabelen en registers******************************
+//Register numbers: 1000000 ... 1001999
+// Flags
+	blLampenAan:			Bool;	at %MX 1;	//Alle lampen aan
+	blLampen1Aan:			Bool;	at %MX 2;	//Lampen kring 1 aan
+	blLampen2Aan:			Bool;	at %MX 3;	//Lampen kring 2 aan
+	blLampen3Aan:			Bool;	at %MX 4;	//Lampen kring 3 aan
+	blAlleVenstersDicht: 	Bool;	at %MX 5;	//Alle dakvensters sluiten
+	blAlleVenstersOpen:		Bool;	at %MX 6;	//Alle dakvensters openen
+	blAlleZonweerDicht: 	Bool;	at %MX 7;	//Alle zonneweringen openen
+	blAlleZonweerOpen:		Bool;	at %MX 8;	//Alle zonneweringen sluiten
+	blPulsPoort:			Bool;	at %MX 9;	//Puls naar poort
+	blPoortOpen:			Bool;	at %MX 10;	//Puls poort als gesloten
+	blPoortToe:				Bool;	at %MX 11;	//Puls poort als niet gesloten
+	blOpenDicht:			Bool;	at %MX 12:	//True = open
+	blActiveerVenster:		Bool;	at %MX 13:	//True = actief open of dicht
+	blActiveerZonweer:		Bool;	at %MX 14:	//True = actief open of dicht
+	blAutoLampenAan:		Bool;	at %MX 15:	//True = lampen aan als schemerschakelaar aan
+	blManLampenAan:			Bool;	at %MX 16:	//True = lampen aan in handbediening
+// Registers
+	regActivatietijdvnstr:	Int		at %vl 1000000; //Tijd nodig om venster te openen of sluiten
+	regActivatietijdzon:	Int		at %vl 1000001; //Tijd nodig om zonnewering te openen of sluiten
+	regVensterNr:			Int		at %vl 1000002; //Nr van het venster dat gecomandeerd wordt
+	regZonweerNr:			Int		at %vl 1000003; //Nr van de zonnewering die gecomandeerd wordt
+	regVensterComm:			Int		at %vl 1000004; //Commando van het venster dat gecomandeerd wordt 0 = stop 1 = open 2 = dicht
+	regZonweerComm:			Int		at %vl 1000005; //Commando van de zonnewering die gecomandeerd wordt 0 = stop 1 = open 2 = dicht
+	regUurLampAan:			Int		at %vl 1000006; //
+	regUurLampUit:			Int		at %vl 1000007; //
+	regMinLampAan:			Int		at %vl 1000008; //
+	regMinLampUit:			Int		at %vl 1000009; //
+	
+//**********************RTC**********************************************
+	Milliseconds:			Int		at %vl 102910; //
+	Seconds:				Int		at %vl 102911; //
+	Minutes:				Int		at %vl 102912; //
+	Hours:					Int		at %vl 102913; //
+	Weekday:				Int		at %vl 102914; //Weekday (0 = Sunday)
+	Day:					Int		at %vl 102915; //
+	Month:					Int		at %vl 102916; //
+	Year:					Int		at %vl 102917; //
+	
+//**********************Fouten*******************************************
+	Ft01_ZoutniveauLaag:	Bool; //Zout niveau in ontharder laag
+	Ft02_GeenComunicatie:	Bool; //Geen comuinicatie met Heimdall
+	Ft03_Brand		:		Bool; //Brand alarm bij TOM
+	Ft04_Inbraak:			Bool; //Inbraak alarm bij TOM
+	Ft05_DeurPlatinaOpen:	Bool; //Deur naar leufel Platina open
+	Ft06_WaterlekZoutvat:	Bool; //Water in lekbak ontharder
+
+//**********************Timers********************************************
+	stVensters: Timer;
+
+End_var
+
+Task tMain Autorun
+//Init
+//Reset registers
+	Ventileren:=0;
+	AllesToe:=0;
+	regVensterComm:=0;
+	regZonweerComm:=0;
+//Reset flags
+	blLampenAan:= False;
+	blLampen1Aan:= False;
+	blLampen2Aan:= False;
+	blLampen3Aan:= False;
+	blAutoLampenAan = False;
+	blManLampenAan := False
+	blAlleVenstersDicht:= False;
+	blAlleVenstersOpen:= False;
+	blAlleZonweerDicht:= False;
+	blAlleZonweerOpen:= False;
+	blPulsPoort:= False;
+	blPoortOpen:= False;
+	blPoortToe:= False;
+//Reset outputs
+	hrVenster1:= False;
+	hrVenster2:= False;
+	hrVenster3:= False;
+	hrVenster4:= False;
+	hrVenster5:= False;
+	hrVenster6:= False;
+	hrVenster7:= False;
+	hrVenster8:= False;
+	hrVenster9:= False;
+	hrVenster10:= False;
+	hrVenster11:= False;
+	hrVenster12:= False;
+	hrVenster13:= False;
+	hrVenster14:= False;
+	hrVenster15:= False;
+	hrVenster16:= False;
+	hrVenster17:= False;
+	hrZonnewering1:= False;
+	hrZonnewering3:= False;
+	hrZonnewering4:= False;
+	hrZonnewering5:= False;
+	hrZonnewering6:= False;
+	hrZonnewering12:= False;
+	hrZonnewering13:= False;
+	hrZonnewering15:= False;
+	hrZonnewering16:= False;
+	hrZonnewering17:= False;
+	hrOpenDicht:= False;
+	hrLampenTom:= False;
+	hrLampenPlatina:= False;
+	hrPoortTom:= False;
+//Reset fouten
+	Ft01_ZoutniveauLaag:= False;
+	Ft02_GeenComunicatie:= False;
+	Ft03_Brand:= False;
+	Ft04_Inbraak:= False;
+	Ft05_DeurPlatinaOpen:= False;
+	Ft06_WaterlekZoutvat:= False;
+//**************************************Start Main loop**************************************
+	While True Do
+
+//*************************************sturing dakvensters***************************************
+	// open of dicht
+	if (regVensterNr !=0 and blOpenDicht) or (regZonweerNr !=0 and blOpenDicht)  then
+		hrOpenDicht = True;
+	else
+		hrOpenDicht = False;
+	end_if
+	
+	case regVensterNr of
+		1:	hrVenster1 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster1 = False;
+			regVensterNr = 0;
+      	2:	hrVenster2 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster2 = False;
+			regVensterNr = 0;
+		3:	hrVenster3 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster3 = False;
+			regVensterNr = 0;
+		4:	hrVenster4 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster4 = False;
+			regVensterNr = 0;	
+		5:	hrVenster5 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster5 = False;
+			regVensterNr = 0;
+  		6:	hrVenster6 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster6 = False;
+			regVensterNr = 0;
+ 		7:	hrVenster7 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster7 = False;
+			regVensterNr = 0;
+		8:	hrVenster8 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster8 = False;
+			regVensterNr = 0;
+		9:	hrVenster9 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster9 = False;
+			regVensterNr = 0;
+		10:	hrVenster10 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster10 = False;
+			regVensterNr = 0;
+		11:	hrVenster11 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster11 = False;
+			regVensterNr = 0;
+		12:	hrVenster12 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster12 = False;
+			regVensterNr = 0;
+		13:	hrVenster13 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster13 = False;
+			regVensterNr = 0;
+		14:	hrVenster14 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster14 = False;
+			regVensterNr = 0;
+		15:	hrVenster15 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster15 = False;
+			regVensterNr = 0;
+		16:	hrVenster16 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster16 = False;
+			regVensterNr = 0;
+		17:	hrVenster17 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster17 = False;
+			regVensterNr = 0;
+		18:	hrVenster18 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 			hrVenster18 = False;
+			regVensterNr = 0;
+		Else regVensterNr = 0;
+
+	End_Case;
+	
+	if ctAlarmAan or blAlleVenstersDicht then
+		if not ctV1Dicht then
+			hrVenster1 = true;
+		end_if
+		if not ctV2Dicht then
+			hrVenster2 = true;
+		end_if
+		if not ctV3Dicht then
+			hrVenster3 = true;
+		end_if
+		if not ctV4Dicht then
+			hrVenster4 = true;
+		end_if
+		if not ctV5Dicht then
+			hrVenster5 = true;
+		end_if
+		if not ctV6Dicht then
+			hrVenster6 = true;
+		end_if
+		if not ctV7Dicht then
+			hrVenster7 = true;
+		end_if
+		if not ctV8Dicht then
+			hrVenster8 = true;
+		end_if
+		if not ctV9Dicht then
+			hrVenster9 = true;
+		end_if
+		if not ctV10Dicht then
+			hrVenster10 = true;
+		end_if
+		if not ctV11Dicht then
+			hrVenster11 = true;
+		end_if
+		if not ctV12Dicht then
+			hrVenster12 = true;
+		end_if
+		if not ctV13Dicht then
+			hrVenster13 = true;
+		end_if
+		if not ctV14Dicht then
+			hrVenster14 = true;
+		end_if
+		if not ctV15Dicht then
+			hrVenster15 = true;
+		end_if
+		if not ctV16Dicht then
+			hrVenster16 = true;
+		end_if
+		if not ctV17Dicht then
+			hrVenster17 = true;
+		end_if
+		if not ctV18Dicht then
+			hrVenster18 = true;
+		end_if
+		TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       	When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 		hrVenster1 = False;
+		hrVenster2 = False;
+		hrVenster3 = False;
+		hrVenster4 = False;
+		hrVenster5 = False;
+		hrVenster6 = False;
+		hrVenster7 = False;
+		hrVenster8 = False;
+		hrVenster9 = False;
+		hrVenster10 = False;
+		hrVenster11 = False;
+		hrVenster12 = False;
+		hrVenster13 = False;
+		hrVenster14 = False;
+		hrVenster15 = False;
+		hrVenster16 = False;
+		hrVenster17 = False;
+		hrVenster18 = False;
+		blAlleVenstersDicht = False;
+	End_If
+	
+	if blAlleVenstersOpen then
+		hrOpenDicht = True
+		if not ctV1Dicht then
+			hrVenster1 = true;
+		end_if
+		if not ctV2Dicht then
+			hrVenster2 = true;
+		end_if
+		if not ctV3Dicht then
+			hrVenster3 = true;
+		end_if
+		if not ctV4Dicht then
+			hrVenster4 = true;
+		end_if
+		if not ctV5Dicht then
+			hrVenster5 = true;
+		end_if
+		if not ctV6Dicht then
+			hrVenster6 = true;
+		end_if
+		if not ctV7Dicht then
+			hrVenster7 = true;
+		end_if
+		if not ctV8Dicht then
+			hrVenster8 = true;
+		end_if
+		if not ctV9Dicht then
+			hrVenster9 = true;
+		end_if
+		if not ctV10Dicht then
+			hrVenster10 = true;
+		end_if
+		if not ctV11Dicht then
+			hrVenster11 = true;
+		end_if
+		if not ctV12Dicht then
+			hrVenster12 = true;
+		end_if
+		if not ctV13Dicht then
+			hrVenster13 = true;
+		end_if
+		if not ctV14Dicht then
+			hrVenster14 = true;
+		end_if
+		if not ctV15Dicht then
+			hrVenster15 = true;
+		end_if
+		if not ctV16Dicht then
+			hrVenster16 = true;
+		end_if
+		if not ctV17Dicht then
+			hrVenster17 = true;
+		end_if
+		if not ctV18Dicht then
+			hrVenster18 = true;
+		end_if
+		TimerStart(stVensters,T#10s);//regActivatietijdvnstr);// Timer is set to 6 s and started.
+       	When TimerEnd(stVensters) or blActiveerVenster = False Continue; // When the time has elapsed, the program continues here
+ 		hrVenster1 = False;
+		hrVenster2 = False;
+		hrVenster3 = False;
+		hrVenster4 = False;
+		hrVenster5 = False;
+		hrVenster6 = False;
+		hrVenster7 = False;
+		hrVenster8 = False;
+		hrVenster9 = False;
+		hrVenster10 = False;
+		hrVenster11 = False;
+		hrVenster12 = False;
+		hrVenster13 = False;
+		hrVenster14 = False;
+		hrVenster15 = False;
+		hrVenster16 = False;
+		hrVenster17 = False;
+		hrVenster18 = False;
+		blAlleVenstersOpen = False;
+		hrOpenDicht = False
+	End_If
+	
+		
+
+//**************************************sturing zonnewering**************************************
+	case regZonweerNr of
+		1:	hrZonnewering1 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering1 = False;
+		3:	hrZonnewering3 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering3 = False;
+		4:	hrZonnewering4 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering4 = False;
+		5:	hrZonnewering5 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering5 = False;
+		6:	hrZonnewering6 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering6 = False;
+		12:	hrZonnewering12 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering12 = False;
+		13:	hrZonnewering13 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering13 = False;
+		15:	hrZonnewering15 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering15 = False;
+		16:	hrZonnewering16 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering16 = False;
+		17:	hrZonnewering17 = true;
+			TimerStart(stVensters,T#10s);//regActivatietijdzonweer);// Timer is set to 6 s and started.
+       		When TimerEnd(stVensters) or blActiveerZonweer = False Continue; // When the time has elapsed, the program continues here
+ 			hrZonnewering17 = False;
+		Else regZonweerNr = 0;
+
+	End_Case;
+
+
+			
+
+//*************************************sturing Lampen**********************************************
+	
+	If blLampen1Aan then
+		blManLampenAan := True
+ 	End_If;
+	
+	If blLampen2Aan or blLampen3Aan then
+		hrLampenPlatina := True;
+	End_If;
+		
+	If blLampenAan then
+		blManLampenAan := True
+ 	End_If;
+	
+	if not (blLampen1Aan or blLampen2Aan or blLampen2Aan) then
+		blManLampenAan := False
+	End_If;
+		
+	if Hours >= regUurLampAan and Minutes >= regMinLampAan then
+		blAutoLampenAan = true;
+	End_if
+
+	if Hours <= regUurLampUit and Minutes <= regMinLampUit then
+		blAutoLampenAan = False;
+		blManLampenAan := False
+	End_if
+	
+	if (blAutoLampenAan and ctSchemer) or blManLampenAan then
+		if blAutoLampenAan or blLampen1Aan Then
+			hrLampenTom = True;
+		End_if
+		if blAutoLampenAan or blLampen2Aan Then
+			hrLampenPlatina = True;
+		End_if
+	else
+		hrLampenPlatina = False;
+		hrLampenTom = False;
+	End_if
+		
+	
+	End_While;
+	
+End_Task
+
+Task tError Autorun
+//*************************************Ft01_CapaciteitVent****************************************
+	While True Do
+	End_While;
+	
+End_Task
+
+
