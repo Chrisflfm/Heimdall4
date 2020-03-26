@@ -21,7 +21,7 @@
       <Define Name="__WKSPDIR__ 'F:\My documents\My JetSymProjects\Heimdall4'" />
       <Define Name="__WKSPNAME__ 'Heimdall4'" />
       <Define Name="__CONTROLLER__ 'JC-340'" />
-      <Define Name="__FIRMWARE__ '1.31'" />
+      <Define Name="__FIRMWARE__ '1.29'" />
       <Define Name="__TARGETPATH__ 'F:\My documents\My JetSymProjects\Heimdall4\Heimdall4\Release\Heimdall4.es3'" />
       <Define Name="__TARGETDIR__ 'F:\My documents\My JetSymProjects\Heimdall4\Heimdall4\Release'" />
       <Define Name="__TARGETNAME__ 'Heimdall4'" />
@@ -38,14 +38,13 @@
       <IncludeFile Name="Platforms.stxp" />
     </IncludeFiles>
     <Versions>
-      <Version Name="OSVER" Value="287" />
-      <Version Name="STXVER" Value="523" />
+      <Version Name="OSVER" Value="285" />
+      <Version Name="STXVER" Value="522" />
       <Version Name="STDSYSVER" Value="257" />
-      <Version Name="PLATFORMVER" Value="265" />
+      <Version Name="PLATFORMVER" Value="264" />
       <Version Name="COMPATIBLEVER" Value="256" />
     </Versions>
     <Options>
-      <Option Name="ForceBuild" />
       <Option Name="CreateErrorOutput" Value="0" />
       <Option Name="WarnLevel" Value="4" />
       <Option Name="WarnStackSize" Value="4096" />

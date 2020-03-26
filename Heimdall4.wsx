@@ -9,12 +9,12 @@
       <Configurations>
         <Configuration>
           <Name>Release</Name>
-          <ForceRebuild>1</ForceRebuild>
+          <ForceRebuild>0</ForceRebuild>
           <AxesVerified>1</AxesVerified>
           <CreateDAFile>0</CreateDAFile>
           <DownloadDAFile>0</DownloadDAFile>
           <CreateExportFile>0</CreateExportFile>
-          <MonitorTask>0</MonitorTask>
+          <MonitorTask>1</MonitorTask>
           <DataDump>
             <CurrentGroupName />
             <ApplyChanges>1</ApplyChanges>
@@ -29,17 +29,68 @@
     </Project>
   </Projects>
   <Breakpoints />
-  <Bookmarks />
+  <Bookmarks>
+    <Bookmark>
+      <Index>0</Index>
+      <Filename>.\Heimdall4\Heimdall4.stxp</Filename>
+      <Line>1162</Line>
+    </Bookmark>
+    <Bookmark>
+      <Index>1</Index>
+      <Filename>.\Heimdall4\Heimdall4.stxp</Filename>
+      <Line>1164</Line>
+    </Bookmark>
+    <Bookmark>
+      <Index>2</Index>
+      <Filename>.\Heimdall4\Heimdall4.stxp</Filename>
+      <Line>70</Line>
+    </Bookmark>
+    <Bookmark>
+      <Index>3</Index>
+      <Filename>.\Heimdall4\Heimdall4.stxp</Filename>
+      <Line>398</Line>
+    </Bookmark>
+  </Bookmarks>
   <ChildFrames>
     <Document>
       <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>491</ViewScrollVert>
+        <ViewScrollVert>405</ViewScrollVert>
+        <Line>434</Line>
+        <Column>6</Column>
+      </ViewFrame>
+    </Document>
+    <Document>
+      <ViewFrame>
+        <DocPathName>HWM:Heimdall4 System\Release\Hardware\Network\JC-340\CPU</DocPathName>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
+        <ViewScrollHoriz>0</ViewScrollHoriz>
+        <ViewScrollVert>0</ViewScrollVert>
+        <Project>Heimdall4</Project>
+        <Config>Release</Config>
+        <MDIWindowID>CPU</MDIWindowID>
+        <AxisKey />
+        <Setup>0</Setup>
+        <ModuleID>M312</ModuleID>
+        <HwNodeIndex>0_0</HwNodeIndex>
+        <BusNodeID />
+        <IsPubSubModule>0</IsPubSubModule>
+        <SplitterPos>160</SplitterPos>
+      </ViewFrame>
+    </Document>
+    <Document>
+      <ViewFrame>
+        <DocPathName>.\Heimdall4\Heimdall4.stxs</DocPathName>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
+        <ViewScrollHoriz>1</ViewScrollHoriz>
+        <ViewScrollVert>1</ViewScrollVert>
         <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Line>529</Line>
-        <Column>20</Column>
+        <Row>5</Row>
+        <Column>1</Column>
+        <SelectionStartChar>11</SelectionStartChar>
+        <SelectionEndChar>11</SelectionEndChar>
       </ViewFrame>
     </Document>
   </ChildFrames>
@@ -49,6 +100,9 @@
     </Treenode>
     <Treenode>
       <Location>Heimdall4/Program</Location>
+    </Treenode>
+    <Treenode>
+      <Location>Heimdall4/Setup</Location>
     </Treenode>
     <Treenode>
       <Location>Heimdall4/System Files</Location>

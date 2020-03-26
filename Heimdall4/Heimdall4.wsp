@@ -17,7 +17,7 @@
 		<SccProjectName/>
 		<SccUserName/>
 		<SccAuxPath/>
-		<SccLocalPath/>
+		<SccLocalPath>..</SccLocalPath>
 	</General>
 	<Files>
 		<File IsGroup="1">
@@ -146,7 +146,7 @@
 			</Compiler>
 			<Controller>
 				<Type>24</Type>
-				<Version>131</Version>
+				<Version>129</Version>
 				<AutoRun>1</AutoRun>
 				<Autoflash>0</Autoflash>
 				<OldProtocol>0</OldProtocol>
@@ -174,7 +174,7 @@
 						<PortAddress>832</PortAddress>
 					</PCPPLC>
 					<Ethernet>
-						<IPAddress>192.168.10.15</IPAddress>
+						<IPAddress>192.168.5.20</IPAddress>
 						<Timeout>2000</Timeout>
 						<PortAddress>0</PortAddress>
 					</Ethernet>

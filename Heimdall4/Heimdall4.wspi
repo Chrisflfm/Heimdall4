@@ -6,6 +6,18 @@
 			<Name>System Files</Name>
 			<SystemGroup>1</SystemGroup>
 			<DocumentType>26</DocumentType>
+			<File>
+				<Name>C:\Program Files (x86)\Jetter\JetSym 5.6.0\Platforms\Platforms.stxp</Name>
+			</File>
+			<File>
+				<Name>C:\Program Files (x86)\Jetter\JetSym 5.6.0\Platforms\JC340API.stxp</Name>
+			</File>
+			<File>
+				<Name>C:\Program Files (x86)\Jetter\JetSym 5.6.0\Platforms\StdSysAPI.stxp</Name>
+			</File>
+			<File>
+				<Name>C:\Program Files (x86)\Jetter\JetSym 5.6.0\Platforms\SwapEndianAPI.stxp</Name>
+			</File>
 		</File>
 		<File IsGroup="1">
 			<Name>External Dependencies</Name>

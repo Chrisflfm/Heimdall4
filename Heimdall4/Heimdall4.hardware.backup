@@ -23,7 +23,7 @@
       <ProductID>P19</ProductID>
       <ProductName>JC-340</ProductName>
       <AxisGroups>false</AxisGroups>
-      <Version>1.29</Version>
+      <Version>1.31</Version>
       <Autorun>true</Autorun>
       <Autoflash>false</Autoflash>
       <OnlineVersionDetection>true</OnlineVersionDetection>
@@ -34,10 +34,10 @@
       <TryTCP>false</TryTCP>
       <OldProtocol>false</OldProtocol>
       <CAN>false</CAN>
-      <EthernetIPAddress>192.168.5.20</EthernetIPAddress>
+      <EthernetIPAddress>192.168.10.15</EthernetIPAddress>
       <EthernetTimeout>2000</EthernetTimeout>
       <EthernetPortnumber>default</EthernetPortnumber>
-      <EthernetPortnumberPCOM>default</EthernetPortnumberPCOM>
+      <EthernetPortnumberPCOM />
       <PortnumberUseDefaults>true</PortnumberUseDefaults>
       <SerialCOMPort>1</SerialCOMPort>
       <SerialTimeout>4000</SerialTimeout>
@@ -54,7 +54,7 @@
       <CANNodeId>127</CANNodeId>
       <CANBaudrate>250</CANBaudrate>
       <CANTimeout>4000</CANTimeout>
-      <CANHardwareId>-1</CANHardwareId>
+      <CANHardwareId>0</CANHardwareId>
       <CANIOPort>0</CANIOPort>
       <CANInterrupt>0</CANInterrupt>
       <CANDeviceIdx>1</CANDeviceIdx>
