@@ -35,5 +35,3 @@
 .INTERN #1308 "EndianSwapBigToLocal32Bit"
 .INTERN #1309 "EndianSwapLittleToLocal32Bit"
 .INTERN #1310 "NetCopyList"
-.INTERN #1311 "ResetOutputFlags"
-.INTERN #1312 "OpenSluitVensters"
