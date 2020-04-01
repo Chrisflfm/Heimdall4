@@ -14,7 +14,7 @@
           <CreateDAFile>0</CreateDAFile>
           <DownloadDAFile>0</DownloadDAFile>
           <CreateExportFile>0</CreateExportFile>
-          <MonitorTask>-1</MonitorTask>
+          <MonitorTask>0</MonitorTask>
           <DataDump>
             <CurrentGroupName />
             <ApplyChanges>1</ApplyChanges>
@@ -34,19 +34,20 @@
     <Document>
       <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>524</ViewScrollVert>
-        <Line>555</Line>
-        <Column>30</Column>
+        <ViewScrollVert>229</ViewScrollVert>
+        <Line>257</Line>
+        <Column>0</Column>
       </ViewFrame>
     </Document>
     <Document>
       <ViewFrame>
         <DocPathName>HWM:Heimdall4 System\Release\Hardware\Network\JC-340\CPU</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
         <ViewScrollVert>0</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
         <Project>Heimdall4</Project>
         <Config>Release</Config>
         <MDIWindowID>CPU</MDIWindowID>
@@ -62,14 +63,13 @@
     <Document>
       <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxs</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAAAECAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
-        <ViewScrollVert>33</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Row>4</Row>
+        <ViewScrollVert>11</ViewScrollVert>
+        <Row>39</Row>
         <Column>1</Column>
-        <SelectionStartChar>11</SelectionStartChar>
-        <SelectionEndChar>11</SelectionEndChar>
+        <SelectionStartChar>9</SelectionStartChar>
+        <SelectionEndChar>9</SelectionEndChar>
       </ViewFrame>
     </Document>
   </ChildFrames>

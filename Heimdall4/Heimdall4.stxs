@@ -13,199 +13,7 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[blVensterOpen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blVensterDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blVenster11]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster11]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
 				<![CDATA[hrOpenDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV11Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[regVensterNr]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[bltest]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blOpenDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV1Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV2Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV3Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV4Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV5Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV6Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV7Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV8Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV9Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV10Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV11Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV12Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV13Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV14Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV15Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV16Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV17Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV18Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctRegen1]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctRegen2]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctSchemer]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster5]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster6]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster18]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
@@ -271,27 +79,28 @@
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrOpenDicht]]>
+				<![CDATA[blZonweerDicht]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrLampenTom]]>
+				<![CDATA[blZonweerOpen]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrLampenPlatina]]>
+				<![CDATA[stVensters]]>
 			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrPoortTom]]>
-			</Name>
-			<Flags>32769</Flags>
+			<Flags>32785</Flags>
+			<HierarchyData>
+				<HierarchyState>1</HierarchyState>
+				<HierarchyDepth>0</HierarchyDepth>
+				<LastChild>0</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>187112224</ParentID>
+			</HierarchyData>
 		</Row>
 		<Row>
 			<Name>
@@ -390,132 +199,57 @@
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[hrVenster17]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[hrLampenPlatina]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[hrLampenTom]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[100060000]]>
+			</Name>
+			<Flags>4</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[100060514]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[250001]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[210004]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[200002011]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
+			<Name>
+				<![CDATA[200002008]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
