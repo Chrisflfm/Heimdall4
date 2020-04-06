@@ -216,6 +216,9 @@ Var
 	blDonker:				Bool	at %MX 59;	//Voor pannel, het is donker buiten
 	blnoAlarm:				Bool	at %MX 60;	//Voor pannel, er is geen alarm
 	blAlarm:				Bool	at %MX 61;	//Voor pannel, er is alarm
+	blAlleVenstersToe:		Bool	at %MX 62;	//vereenvoudeging
+	blPoolOm:				Bool	at %MX 62;	//vereenvoudeging
+	
 
 // Registers
 	regActivatietijdvnstr:	Int		at %vl 1000000; //Tijd nodig om venster te openen of sluiten
@@ -230,6 +233,7 @@ Var
 	regMinLampUit:			Int		at %vl 1000009; //
 	regUurPoortOpen:		Int		at %vl 1000010; //
 	regMinPoortOpen:		Int		at %vl 1000011; //
+	regAantDagPoortToe:		Int		at %vl 1000012; //
 //**********************RTC**********************************************
 	Milliseconds:			Int		at %vl 102910; //
 	Seconds:				Int		at %vl 102911; //
@@ -247,6 +251,7 @@ Var
 	Ft04_Inbraak:			Bool	at %MX 103;//Inbraak alarm bij TOM
 	Ft05_DeurPlatinaOpen:	Bool	at %MX 104;//Deur naar leufel Platina open
 	Ft06_WaterlekZoutvat:	Bool	at %MX 105;//Water in lekbak ontharder
+	Ft07_OpenDichtRelais:	Bool	at %MX 106;//relais sturing fout
 
 //**********************Timers********************************************
 	stVensters: 			Timer;
@@ -352,35 +357,37 @@ Task tMain Autorun
 	While True Do
 
 // open of dicht
-	if blVensterDicht or blZonweerOpen or blAlleVenstersDicht or blAlleZonweerOpen   then
-			blOpenDicht := True;
-		End_if;
-		
-		if not blVensterDicht and not blZonweerOpen and not blAlleVenstersDicht and not blAlleZonweerOpen then
-			blOpenDicht := False;
-		End_if;
+	if (blVensterDicht or blZonweerOpen or blAlleVenstersDicht or blAlleZonweerOpen) then
+		blOpenDicht := True;
+	End_if;
+	
+	
 //*************************************sturing dakvensters***************************************
 //gezamelijk
-	if blAlleVenstersDicht or blAlleVenstersOpen then
+	if (ctV1Dicht and ctV2Dicht and ctV3Dicht and ctV4Dicht and ctV5Dicht and ctV6Dicht and ctV7Dicht and ctV8Dicht and ctV9Dicht and ctV10Dicht and ctV11Dicht and ctV12Dicht and ctV13Dicht and ctV14Dicht and ctV15Dicht and ctV16Dicht and ctV17Dicht and ctV18Dicht) then
+		blAlleVenstersToe := True;
+	Else
+		blAlleVenstersToe := False;
+	End_if;
+	if (blRegen or ctAlarmAan) and not blAlleVenstersToe then
+		blAlleVenstersDicht := True;
+		//blOpenDicht := True;
+	End_if;
+
+	if blAlleVenstersDicht or (blAlleVenstersOpen and not blRegen) then
 		blVenster1 := true;
 		blVenster2 := true;
 		blVenster3 := true;
-		
-			TimerStart(stVensters,T#30s);//regActivatietijdzonweer);// Timer is set to 30s and started.
-		When TimerEnd(stVensters) or (not blAlleZonweerDicht and not blAlleZonweerOpen) Continue; // When the time has elapsed, the program continues here
-			
-		blVenster1 := False;
-		blVenster2 := False;
-		blVenster3 := False;
-		
 		blVenster4 := true;
 		blVenster5 := true;
 		blVenster6 := true;
 		
 		TimerStart(stVensters,T#30s);//regActivatietijdzonweer);// Timer is set to 30s and started.
-		When TimerEnd(stVensters) or (not blAlleZonweerDicht and not blAlleZonweerOpen) Continue; // When the time has elapsed, the program continues here
-				
-		
+		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
+			
+		blVenster1 := False;
+		blVenster2 := False;
+		blVenster3 := False;
 		blVenster4 := False;
 		blVenster5 := False;
 		blVenster6 := False;
@@ -388,21 +395,16 @@ Task tMain Autorun
 		blVenster7 := true;
 		blVenster8 := true;
 		blVenster9 := true;
-		
-		TimerStart(stVensters,T#30s);//regActivatietijdzonweer);// Timer is set to 30s and started.
-		When TimerEnd(stVensters) or (not blAlleZonweerDicht and not blAlleZonweerOpen) Continue; // When the time has elapsed, the program continues here
-	
-		blVenster7 := False;
-		blVenster8 := False;
-		blVenster9 := False;
-		
 		blVenster10 := true;
 		blVenster11 := true;
 		blVenster12 := true;
 		
 		TimerStart(stVensters,T#30s);//regActivatietijdzonweer);// Timer is set to 30s and started.
-		When TimerEnd(stVensters) or (not blAlleZonweerDicht and not blAlleZonweerOpen) Continue; // When the time has elapsed, the program continues here
-		
+		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
+	
+		blVenster7 := False;
+		blVenster8 := False;
+		blVenster9 := False;
 		blVenster10 := False;
 		blVenster11 := False;
 		blVenster12 := False;
@@ -410,6 +412,9 @@ Task tMain Autorun
 		blVenster13 := true;
 		blVenster14 := true;
 		blVenster15 := true;
+		blVenster16 := true;
+		blVenster17 := true;
+		blVenster18 := true;
 		
 		TimerStart(stVensters,T#30s);//regActivatietijdvnstr);// Timer is set to 30s and started.
    		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
@@ -417,24 +422,17 @@ Task tMain Autorun
 		blVenster13 := False;
 		blVenster14 := False;
 		blVenster15 := False;
-				
-		blVenster16 := true;
-		blVenster17 := true;
-		blVenster18 := true;
-
-		TimerStart(stVensters,T#30s);//regActivatietijdvnstr);// Timer is set to 30s and started.
-   		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
-		
 		blVenster16 := False;
 		blVenster17 := False;
 		blVenster18 := False;
 		
 		blAlleVenstersDicht := False;
 		blAlleVenstersOpen := False;
+		blOpenDicht := False;
 	End_if;
 
 // individueel		
-		if (blVensterDicht or blVensterOpen) and not blAlleVenstersOpen and not blAlleVenstersDicht then
+		if (blVensterDicht or (blVensterOpen and not blRegen)) and not blAlleVenstersOpen and not blAlleVenstersDicht then
 			case regVensterNr of
 				1:	blVenster1 := true;
 					break;
@@ -515,6 +513,7 @@ Task tMain Autorun
 				blVenster18 := False;
 				blVensterOpen := False;
 				blVensterDicht := False;
+				blOpenDicht := False;
 		End_if;
 	
 		
@@ -547,6 +546,7 @@ Task tMain Autorun
 			blZonnewering6 := False;
 			blAlleZonweerDicht := False;
 			blAlleZonweerOpen := False;
+			blOpenDicht := False;
 		End_if;
 		
 		if (blZonweerDicht or blZonweerOpen) and not blAlleZonweerDicht and not blAlleZonweerOpen then	
@@ -598,6 +598,7 @@ Task tMain Autorun
 			blZonnewering17 := False;
 			blZonweerDicht := False;
 			blZonweerOpen := False;
+			blOpenDicht := False;
 		End_if;
 		
 
@@ -645,9 +646,13 @@ Task tMain Autorun
 //*************************************Sturing Poort**********************************************
 
 		if Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and  ctPoortDicht and not blPoortTomIsOpen then
-			blPoortTomOpen := True;
-			blPoortTomIsOpen := True;
-			TimerStart(stPoortOpen,T#30m);//regActivatietijdzonweer);// Timer is set to 30m and started.
+			if  regAantDagPoortToe == 0 then
+				blPoortTomOpen := True;
+				blPoortTomIsOpen := True;
+				TimerStart(stPoortOpen,T#30m);//regActivatietijdzonweer);// Timer is set to 30m and started.
+			else
+				 regAantDagPoortToe :=  regAantDagPoortToe - 1;
+			End_if;
 		End_If;
 		
 		If Hours < regUurPoortOpen then
@@ -658,15 +663,11 @@ Task tMain Autorun
 			blPoortTomtoe := True
 		End_If;
 		
-		if not blPoortTomOpen and not blPoortTomtoe then
+		if not blPoorttoe then
 			blPoort := False
 		End_If;
 		
-		if blPoortTomOpen and not ctPoortDicht then 			
-			 blPoort := true
-		End_If;
-		
-		if blPoortTomtoe and not ctPoortDicht then 			
+		if blPoorttoe then 			
 			 blPoort := True
 		End_If;
 		
@@ -676,8 +677,8 @@ Task tMain Autorun
 	     	When TimerEnd(stPoortPuls) Continue;
 	 		blPoortTom := False;
 			blPoort := False;
-			blPoortTomOpen := False;
-			blPoortTomToe := False;	
+			blPoortOpen := False;
+			blPoortToe := False;	
 		End_If;
 	
 	End_While;
@@ -700,13 +701,14 @@ Task tVeiligheden Autorun
 			blLampenTom := True;
 		End_If;
 //Regen
-		if not ctRegen1 or not ctRegen2 then
+		if not ctRegen1 and not ctRegen2 and not blTest then
 			blRegen := False;
 			blDroog := True;
 		End_If;
-		if  ctRegen1 and ctRegen2 then
+		if  ctRegen1 or ctRegen2 or blTest then
 			blRegen := True;
 			blDroog := False;
+			blAlleVenstersOpen = False;
 		End_If;
 
 //Licht donker
@@ -720,7 +722,7 @@ Task tVeiligheden Autorun
 
 //*************************************Outputs**********************************************
 		
-		if blOpenDicht then
+		if blOpenDicht or blRegen then
 			hrOpenDicht := true
 		else
 			hrOpenDicht := false
@@ -766,7 +768,7 @@ Task tVeiligheden Autorun
 		if not blVenster7 then
 			hrVenster7 := False;
 		End_If;		
-		if (blVenster7 and not hrOpenDicht) or (blVenster1 and hrOpenDicht ) then
+		if (blVenster7 and not hrOpenDicht) or (blVenster7 and hrOpenDicht ) then
 			hrVenster7 := True;
 		End_If;		
 		if not blVenster8 then
@@ -972,8 +974,14 @@ Task tError Autorun
 			blnoAlarm := True;
 			blAlarm := False
 		end_if;
+//*************************************Ft07_OpenDichtRelais****************************************		
+		if (blAlleVenstersDicht or blAlleZonweerOpen or blVensterDicht or blZonweerOpen) and not hrOpenDicht then
+			Ft07_OpenDichtRelais := True;
+		End_if;
 		
-		
+		if not blAlleVenstersDicht and not blAlleVenstersDicht and not blAlleZonweerOpen and not blVensterDicht and not blZonweerOpen then
+			Ft07_OpenDichtRelais := False;
+		End_if;
 
 	End_While;
 	

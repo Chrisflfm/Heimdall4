@@ -36,9 +36,10 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>229</ViewScrollVert>
-        <Line>257</Line>
-        <Column>0</Column>
+        <ViewScrollVert>344</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
+        <Line>373</Line>
+        <Column>4</Column>
       </ViewFrame>
     </Document>
     <Document>
@@ -47,7 +48,6 @@
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
         <ViewScrollVert>0</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
         <Project>Heimdall4</Project>
         <Config>Release</Config>
         <MDIWindowID>CPU</MDIWindowID>
@@ -65,11 +65,11 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxs</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
-        <ViewScrollVert>11</ViewScrollVert>
-        <Row>39</Row>
-        <Column>1</Column>
-        <SelectionStartChar>9</SelectionStartChar>
-        <SelectionEndChar>9</SelectionEndChar>
+        <ViewScrollVert>1</ViewScrollVert>
+        <Row>25</Row>
+        <Column>5</Column>
+        <SelectionStartChar>0</SelectionStartChar>
+        <SelectionEndChar>0</SelectionEndChar>
       </ViewFrame>
     </Document>
   </ChildFrames>

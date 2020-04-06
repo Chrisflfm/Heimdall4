@@ -19,78 +19,6 @@
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrZonnewering1]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering3]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering4]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering5]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering6]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering12]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering13]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering15]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering16]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrZonnewering17]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blZonweerDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blZonweerOpen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
 				<![CDATA[stVensters]]>
 			</Name>
 			<Flags>32785</Flags>
@@ -206,62 +134,62 @@
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrLampenPlatina]]>
+				<![CDATA[hrVenster18]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrLampenTom]]>
+				<![CDATA[ctV2Dicht]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[100060000]]>
-			</Name>
-			<Flags>4</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[100060514]]>
+				<![CDATA[blVenster7]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[250001]]>
+				<![CDATA[ctRegen1]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[210004]]>
+				<![CDATA[ctRegen2]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[200002011]]>
+				<![CDATA[blAlleVenstersDicht]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[200002008]]>
+				<![CDATA[blTest]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[blRegen]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[blAlleVenstersOpen]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
+			<Name>
+				<![CDATA[blOpenDicht]]>
+			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
