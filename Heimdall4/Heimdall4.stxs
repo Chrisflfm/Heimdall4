@@ -13,219 +13,50 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[hrOpenDicht]]>
+				<![CDATA[ctAlarmAan]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[stVensters]]>
-			</Name>
-			<Flags>32785</Flags>
-			<HierarchyData>
-				<HierarchyState>1</HierarchyState>
-				<HierarchyDepth>0</HierarchyDepth>
-				<LastChild>0</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>187112224</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster1]]>
+				<![CDATA[ctAlarmUit]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrVenster2]]>
+				<![CDATA[ctBrand]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrVenster3]]>
+				<![CDATA[ctDeurPlatina]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrVenster4]]>
+				<![CDATA[ctInbraak]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrVenster5]]>
+				<![CDATA[ctPoortDicht]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrVenster6]]>
+				<![CDATA[blNotAlarmAan]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hrVenster7]]>
+				<![CDATA[blNotAlarmUit]]>
 			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster8]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster9]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster10]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster11]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster12]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster13]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster14]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster15]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster16]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster17]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrVenster18]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctV2Dicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blVenster7]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctRegen1]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctRegen2]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blAlleVenstersDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blTest]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blRegen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blAlleVenstersOpen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blOpenDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>

@@ -217,7 +217,12 @@ Var
 	blnoAlarm:				Bool	at %MX 60;	//Voor pannel, er is geen alarm
 	blAlarm:				Bool	at %MX 61;	//Voor pannel, er is alarm
 	blAlleVenstersToe:		Bool	at %MX 62;	//vereenvoudeging
-	blPoolOm:				Bool	at %MX 62;	//vereenvoudeging
+	blPoolOm:				Bool	at %MX 63;	//vereenvoudeging
+	blNotAlarmAan:			Bool	at %MX 64;	//vereenvoudeging
+	blNotAlarmUit:			Bool	at %MX 65;	//vereenvoudeging
+	blNotBrand:				Bool	at %MX 66;	//vereenvoudeging
+	blNotInbraak:			Bool	at %MX 67;	//vereenvoudeging
+	blNotDeurPlatina:		Bool	at %MX 68;	//vereenvoudeging
 	
 
 // Registers
@@ -369,7 +374,7 @@ Task tMain Autorun
 	Else
 		blAlleVenstersToe := False;
 	End_if;
-	if (blRegen or ctAlarmAan) and not blAlleVenstersToe then
+	if (blRegen or not ctAlarmAan) and not blAlleVenstersToe then
 		blAlleVenstersDicht := True;
 		//blOpenDicht := True;
 	End_if;
@@ -690,13 +695,19 @@ Task tVeiligheden Autorun
 	While True Do
 //*************************************Alarm**********************************************
 //Alarm
-		if  ctBrand then
+		blnotAlarmAan := not ctAlarmAan;
+		blnotAlarmUit := not ctAlarmUit;
+		blnotBrand := not ctBrand;
+		blnotInbraak := not ctInbraak;
+		blnotDeurPlatina := not ctDeurPlatina;
+	
+		if not ctBrand then
 			blPoortTomIsOpen := True;
 			blLampenPlatina := True;
 			blLampenTom := True;
 		End_If;
 	
-		if  ctInbraak then
+		if not ctInbraak then
 			blPoortTomtoe := True;
 			blLampenTom := True;
 		End_If;
@@ -708,7 +719,7 @@ Task tVeiligheden Autorun
 		if  ctRegen1 or ctRegen2 or blTest then
 			blRegen := True;
 			blDroog := False;
-			blAlleVenstersOpen = False;
+			blAlleVenstersOpen := False;
 		End_If;
 
 //Licht donker
@@ -722,7 +733,7 @@ Task tVeiligheden Autorun
 
 //*************************************Outputs**********************************************
 		
-		if blOpenDicht or blRegen then
+		if blOpenDicht or blRegen or not ctAlarmAan then
 			hrOpenDicht := true
 		else
 			hrOpenDicht := false
@@ -940,20 +951,20 @@ Task tError Autorun
 			Ft02_GeenComunicatie := False;
 		End_If;
 //*************************************Ft03_Brand****************************************
-		if  ctBrand then
+		if not ctBrand then
 			Ft03_Brand := true;
 		else
 			Ft03_Brand := False;
 		End_If;
 //*************************************Ft04_Inbraak****************************************
-		if  ctInbraak then
+		if not ctInbraak then
 			Ft04_Inbraak := true;
 		else
 			Ft04_Inbraak := False;
 		End_If;
 
 //*************************************Ft05_DeurPlatinaOpen****************************************
-		if  ctDeurPlatina then
+		if not ctDeurPlatina then
 			Ft05_DeurPlatinaOpen := true;
 		else
 			Ft05_DeurPlatinaOpen := False;
@@ -965,15 +976,6 @@ Task tError Autorun
 		else
 			Ft06_WaterlekZoutvat := False;
 		End_If;
-
-		if Ft01_ZoutniveauLaag or Ft02_GeenComunicatie or Ft03_Brand or Ft04_Inbraak or Ft05_DeurPlatinaOpen or Ft06_WaterlekZoutvat then
-			blnoAlarm := False;
-			blAlarm := True
-		end_if;
-		if not Ft01_ZoutniveauLaag and not Ft02_GeenComunicatie  and not Ft03_Brand  and not Ft04_Inbraak  and not Ft05_DeurPlatinaOpen  and not Ft06_WaterlekZoutvat then
-			blnoAlarm := True;
-			blAlarm := False
-		end_if;
 //*************************************Ft07_OpenDichtRelais****************************************		
 		if (blAlleVenstersDicht or blAlleZonweerOpen or blVensterDicht or blZonweerOpen) and not hrOpenDicht then
 			Ft07_OpenDichtRelais := True;
@@ -982,6 +984,15 @@ Task tError Autorun
 		if not blAlleVenstersDicht and not blAlleVenstersDicht and not blAlleZonweerOpen and not blVensterDicht and not blZonweerOpen then
 			Ft07_OpenDichtRelais := False;
 		End_if;
+//*************************************foutaanwezig****************************************		
+		if Ft01_ZoutniveauLaag or Ft02_GeenComunicatie or Ft03_Brand or Ft04_Inbraak or Ft05_DeurPlatinaOpen or Ft06_WaterlekZoutvat or Ft07_OpenDichtRelais then
+			blnoAlarm := False;
+			blAlarm := True
+		end_if;
+		if not Ft01_ZoutniveauLaag and not Ft02_GeenComunicatie  and not Ft03_Brand  and not Ft04_Inbraak  and not Ft05_DeurPlatinaOpen  and not Ft06_WaterlekZoutvat and not Ft07_OpenDichtRelais then
+			blnoAlarm := True;
+			blAlarm := False
+		end_if;
 
 	End_While;
 	
