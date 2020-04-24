@@ -13,31 +13,31 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[ctAlarmAan]]>
+				<![CDATA[hrPoortTom]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctAlarmUit]]>
+				<![CDATA[blPoortTomIsOpen]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctBrand]]>
+				<![CDATA[blPulsPoort]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctDeurPlatina]]>
+				<![CDATA[blPoort]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctInbraak]]>
+				<![CDATA[blPoortTom]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
@@ -49,45 +49,42 @@
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blNotAlarmAan]]>
+				<![CDATA[stVensters]]>
 			</Name>
-			<Flags>32769</Flags>
+			<Flags>32785</Flags>
+			<HierarchyData>
+				<HierarchyState>2</HierarchyState>
+				<HierarchyDepth>0</HierarchyDepth>
+				<LastChild>0</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>101821720</ParentID>
+			</HierarchyData>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blNotAlarmUit]]>
+				<![CDATA[stVensters.TimerHi]]>
 			</Name>
 			<Flags>32769</Flags>
+			<HierarchyData>
+				<HierarchyState>0</HierarchyState>
+				<HierarchyDepth>1</HierarchyDepth>
+				<LastChild>0</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>101821720</ParentID>
+			</HierarchyData>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[stVensters.TimerLo]]>
+			</Name>
 			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Flags>32769</Flags>
+			<HierarchyData>
+				<HierarchyState>0</HierarchyState>
+				<HierarchyDepth>1</HierarchyDepth>
+				<LastChild>1</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>101821720</ParentID>
+			</HierarchyData>
 		</Row>
 	</Rows>
 	<Columns>

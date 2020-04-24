@@ -36,9 +36,9 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>703</ViewScrollVert>
-        <Line>721</Line>
-        <Column>23</Column>
+        <ViewScrollVert>658</ViewScrollVert>
+        <Line>681</Line>
+        <Column>12</Column>
       </ViewFrame>
     </Document>
     <Document>
@@ -66,10 +66,10 @@
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
         <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Row>8</Row>
+        <Row>7</Row>
         <Column>1</Column>
-        <SelectionStartChar>13</SelectionStartChar>
-        <SelectionEndChar>13</SelectionEndChar>
+        <SelectionStartChar>0</SelectionStartChar>
+        <SelectionEndChar>0</SelectionEndChar>
       </ViewFrame>
     </Document>
   </ChildFrames>

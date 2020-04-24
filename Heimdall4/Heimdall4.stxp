@@ -33,7 +33,7 @@ Var
 	ctZoutVatLek:	Bool	at %IX 100000313; //Lek in zoutvat ontharder
 	Reserve1:		Bool	at %IX 100000314; //Reserve
 	Reserve2:		Bool	at %IX 100000315; //Reserve
-	Reserve3:		Bool	at %IX 100000316; //Reserve
+	ctpltnlmpAan:	Bool	at %IX 100000316; //Reserve
 	
 	
 //Digitaal Output	
@@ -165,10 +165,10 @@ Var
 	blAlleZonweerDicht: 	Bool	at %MX 7;	//Alle zonneweringen openen
 	blAlleZonweerOpen:		Bool	at %MX 8;	//Alle zonneweringen sluiten
 	blPulsPoort:			Bool	at %MX 9;	//Puls naar poort
-	blPoortOpen:			Bool	at %MX 10;	//Puls poort als gesloten
-	blPoortToe:				Bool	at %MX 11;	//Puls poort als niet gesloten
-	blOpenDicht:			Bool	at %MX 12;	//True = open
-	blTest:					Bool	at %MX 13;	//True = actief open of dicht
+	blPoortTomIsOpen:		Bool	at %MX 10;	//poort is 's morgens opgestuurd
+	blPoortTom:				Bool	at %MX 11;	//flag voor output
+	blOpenDicht:			Bool	at %MX 12;	//Voor ompool relais
+	blTest:					Bool	at %MX 13;	//
 	blDroog:				Bool	at %MX 14;	//Voor pannel, het is droog buiten
 	blAutoLampenAan:		Bool	at %MX 15;	//True = lampen aan als schemerschakelaar aan
 	blManLampenAan:			Bool	at %MX 16;	//True = lampen aan in handbediening
@@ -202,10 +202,10 @@ Var
 	blZonnewering17:		Bool	at %MX 45;	//flag voor task veiligheden
 	blLampenTom:			Bool	at %MX 46;	//flag voor task veiligheden
 	blLampenPlatina:		Bool	at %MX 47;	//flag voor task veiligheden
-	blPoortTom:				Bool	at %MX 48;	//flag voor task veiligheden
-	blPoortTomOpen:			Bool	at %MX 49;	//flag voor task veiligheden
-	blPoortTomtoe:			Bool	at %MX 50;	//flag voor task veiligheden
-	blPoortTomIsOpen:		Bool	at %MX 51;	//flag voor task veiligheden
+	res48:					Bool	at %MX 48;	//
+	res49:					Bool	at %MX 49;	//
+	res50:					Bool	at %MX 50;	//
+	res51:					Bool	at %MX 51;	//
 	blRegen:				Bool	at %MX 52;	//flag voor task veiligheden
 	blPoort:				Bool	at %MX 53;	//flag voor task veiligheden
 	blVensterDicht: 		Bool	at %MX 54;	//Alle dakvensters sluiten
@@ -285,8 +285,6 @@ Task tMain Autorun
 	blAlleZonweerDicht := False;
 	blAlleZonweerOpen := False;
 	blPulsPoort := False;
-	blPoortOpen := False;
-	blPoortToe := False;
 	blVenster1 := False;
 	blVenster2 := False;
 	blVenster3 := False;
@@ -315,9 +313,6 @@ Task tMain Autorun
 	blZonnewering15 := False;
 	blZonnewering16 := False;
 	blZonnewering17 := False;
-	blOpenDicht := False;
-	blPoortTomOpen := False;
-	blPoortTomToe := False;
 	blRegen := False;
 //Reset outputs
 	hrVenster1 := False;
@@ -386,6 +381,18 @@ Task tMain Autorun
 		blVenster4 := true;
 		blVenster5 := true;
 		blVenster6 := true;
+		blVenster7 := true;
+		blVenster8 := true;
+		blVenster9 := true;
+		blVenster10 := true;
+		blVenster11 := true;
+		blVenster12 := true;
+		blVenster13 := true;
+		blVenster14 := true;
+		blVenster15 := true;
+		blVenster16 := true;
+		blVenster17 := true;
+		blVenster18 := true;
 		
 		TimerStart(stVensters,T#30s);//regActivatietijdzonweer);// Timer is set to 30s and started.
 		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
@@ -396,34 +403,12 @@ Task tMain Autorun
 		blVenster4 := False;
 		blVenster5 := False;
 		blVenster6 := False;
-		
-		blVenster7 := true;
-		blVenster8 := true;
-		blVenster9 := true;
-		blVenster10 := true;
-		blVenster11 := true;
-		blVenster12 := true;
-		
-		TimerStart(stVensters,T#30s);//regActivatietijdzonweer);// Timer is set to 30s and started.
-		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
-	
 		blVenster7 := False;
 		blVenster8 := False;
 		blVenster9 := False;
 		blVenster10 := False;
 		blVenster11 := False;
 		blVenster12 := False;
-		
-		blVenster13 := true;
-		blVenster14 := true;
-		blVenster15 := true;
-		blVenster16 := true;
-		blVenster17 := true;
-		blVenster18 := true;
-		
-		TimerStart(stVensters,T#30s);//regActivatietijdvnstr);// Timer is set to 30s and started.
-   		When TimerEnd(stVensters) or (not blAlleVenstersDicht and not blAlleVenstersOpen) Continue; // When the time has elapsed, the program continues here
-		
 		blVenster13 := False;
 		blVenster14 := False;
 		blVenster15 := False;
@@ -609,6 +594,7 @@ Task tMain Autorun
 
 //*************************************sturing Lampen**********************************************
 				
+		
 		If blLampen1Aan then
 			blManLampenAan := True
 	 	End_If;
@@ -634,14 +620,14 @@ Task tMain Autorun
 			blManLampenAan := False
 		End_If;
 	
-		if (blAutoLampenAan and ctSchemer and not ctPoortDicht) or blLampen1Aan then
+		if (blAutoLampenAan and ctSchemer and not ctPoortDicht and blNotAlarmAan) or blLampen1Aan then
 			blLampenTom := True;
 		else
 			blLampenTom := False;
 		End_if;
 	
 		
-		if (blAutoLampenAan and ctSchemer) or blLampen2Aan or blLampen3Aan Then
+		if (ctpltnlmpAan and ctSchemer) or blLampen2Aan or blLampen3Aan Then
 			blLampenPlatina := True;
 		else
 			blLampenPlatina := False;
@@ -650,9 +636,9 @@ Task tMain Autorun
 		
 //*************************************Sturing Poort**********************************************
 
-		if Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and  ctPoortDicht and not blPoortTomIsOpen then
+		if (Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and not ctPoortDicht and not blPoortTomIsOpen) then
 			if  regAantDagPoortToe == 0 then
-				blPoortTomOpen := True;
+				blPoort := True;
 				blPoortTomIsOpen := True;
 				TimerStart(stPoortOpen,T#30m);//regActivatietijdzonweer);// Timer is set to 30m and started.
 			else
@@ -661,29 +647,20 @@ Task tMain Autorun
 		End_If;
 		
 		If Hours < regUurPoortOpen then
-			blPoortTomIsOpen := False;
+			blPoortTomIsOpen := False; // reset na middernacht
 		End_If;
 		
-		if TimerEnd(stPoortOpen) and ctAlarmAan then
-			blPoortTomtoe := True
+		if TimerEnd(stPoortOpen) and not ctAlarmAan and not ctPoortDicht then
+			blPoort := True;
 		End_If;
 		
-		if not blPoorttoe then
-			blPoort := False
-		End_If;
-		
-		if blPoorttoe then 			
-			 blPoort := True
-		End_If;
-		
-		if blPoort then
-			blPoortTom := true;
+		if blPoort or blPulsPoort then
+			blPoortTom := True;
 			TimerStart(stPoortPuls,T#1s);
 	     	When TimerEnd(stPoortPuls) Continue;
-	 		blPoortTom := False;
-			blPoort := False;
-			blPoortOpen := False;
-			blPoortToe := False;	
+			blPoortTom := False;
+	 		blPoort := False;
+			blPulsPoort := False;
 		End_If;
 	
 	End_While;
@@ -702,13 +679,15 @@ Task tVeiligheden Autorun
 		blnotDeurPlatina := not ctDeurPlatina;
 	
 		if not ctBrand then
-			blPoortTomIsOpen := True;
+			if not ctPoortDicht then
+				blPulsPoort := True;
+			End_if;
 			blLampenPlatina := True;
 			blLampenTom := True;
 		End_If;
 	
 		if not ctInbraak then
-			blPoortTomtoe := True;
+			
 			blLampenTom := True;
 		End_If;
 //Regen
@@ -976,14 +955,9 @@ Task tError Autorun
 		else
 			Ft06_WaterlekZoutvat := False;
 		End_If;
-//*************************************Ft07_OpenDichtRelais****************************************		
-		if (blAlleVenstersDicht or blAlleZonweerOpen or blVensterDicht or blZonweerOpen) and not hrOpenDicht then
-			Ft07_OpenDichtRelais := True;
-		End_if;
-		
-		if not blAlleVenstersDicht and not blAlleVenstersDicht and not blAlleZonweerOpen and not blVensterDicht and not blZonweerOpen then
-			Ft07_OpenDichtRelais := False;
-		End_if;
+//*************************************Ft07****************************************		
+	
+	
 //*************************************foutaanwezig****************************************		
 		if Ft01_ZoutniveauLaag or Ft02_GeenComunicatie or Ft03_Brand or Ft04_Inbraak or Ft05_DeurPlatinaOpen or Ft06_WaterlekZoutvat or Ft07_OpenDichtRelais then
 			blnoAlarm := False;
