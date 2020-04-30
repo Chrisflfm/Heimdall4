@@ -13,31 +13,13 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[hrPoortTom]]>
+				<![CDATA[hours]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blPoortTomIsOpen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blPulsPoort]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blPoort]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blPoortTom]]>
+				<![CDATA[minutes]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
@@ -49,7 +31,19 @@
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[stVensters]]>
+				<![CDATA[hrPoortTom]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[seconds]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[stRegenSensor]]>
 			</Name>
 			<Flags>32785</Flags>
 			<HierarchyData>
@@ -57,12 +51,12 @@
 				<HierarchyDepth>0</HierarchyDepth>
 				<LastChild>0</LastChild>
 				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>101821720</ParentID>
+				<ParentID>247546808</ParentID>
 			</HierarchyData>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[stVensters.TimerHi]]>
+				<![CDATA[stRegenSensor.TimerHi]]>
 			</Name>
 			<Flags>32769</Flags>
 			<HierarchyData>
@@ -70,12 +64,12 @@
 				<HierarchyDepth>1</HierarchyDepth>
 				<LastChild>0</LastChild>
 				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>101821720</ParentID>
+				<ParentID>247546808</ParentID>
 			</HierarchyData>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[stVensters.TimerLo]]>
+				<![CDATA[stRegenSensor.TimerLo]]>
 			</Name>
 			<Flags>32769</Flags>
 			<HierarchyData>
@@ -83,8 +77,23 @@
 				<HierarchyDepth>1</HierarchyDepth>
 				<LastChild>1</LastChild>
 				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>101821720</ParentID>
+				<ParentID>247546808</ParentID>
 			</HierarchyData>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[blRegen]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[blDroog]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Flags>32769</Flags>
 		</Row>
 	</Rows>
 	<Columns>

@@ -14,7 +14,7 @@
           <CreateDAFile>0</CreateDAFile>
           <DownloadDAFile>0</DownloadDAFile>
           <CreateExportFile>0</CreateExportFile>
-          <MonitorTask>1</MonitorTask>
+          <MonitorTask>0</MonitorTask>
           <DataDump>
             <CurrentGroupName />
             <ApplyChanges>1</ApplyChanges>
@@ -36,9 +36,10 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>658</ViewScrollVert>
-        <Line>681</Line>
-        <Column>12</Column>
+        <ViewScrollVert>692</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
+        <Line>692</Line>
+        <Column>7</Column>
       </ViewFrame>
     </Document>
     <Document>
@@ -65,8 +66,7 @@
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Row>7</Row>
+        <Row>11</Row>
         <Column>1</Column>
         <SelectionStartChar>0</SelectionStartChar>
         <SelectionEndChar>0</SelectionEndChar>

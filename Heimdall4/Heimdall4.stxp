@@ -262,6 +262,7 @@ Var
 	stVensters: 			Timer;
 	stPoortPuls: 			Timer;
 	stPoortOpen: 			Timer;
+	stRegenSensor:			Timer;
 
 End_var
 
@@ -371,7 +372,6 @@ Task tMain Autorun
 	End_if;
 	if (blRegen or not ctAlarmAan) and not blAlleVenstersToe then
 		blAlleVenstersDicht := True;
-		//blOpenDicht := True;
 	End_if;
 
 	if blAlleVenstersDicht or (blAlleVenstersOpen and not blRegen) then
@@ -636,7 +636,7 @@ Task tMain Autorun
 		
 //*************************************Sturing Poort**********************************************
 
-		if (Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and not ctPoortDicht and not blPoortTomIsOpen) then
+		if (Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and ctPoortDicht and not blPoortTomIsOpen) then
 			if  regAantDagPoortToe == 0 then
 				blPoort := True;
 				blPoortTomIsOpen := True;
@@ -691,11 +691,14 @@ Task tVeiligheden Autorun
 			blLampenTom := True;
 		End_If;
 //Regen
-		if not ctRegen1 and not ctRegen2 and not blTest then
+		if not ctRegen1 and not ctRegen2 then
+			TimerStart(stRegenSensor,T#5m);
+		End_If
+		if TimerEnd (stRegenSensor) then
 			blRegen := False;
 			blDroog := True;
 		End_If;
-		if  ctRegen1 or ctRegen2 or blTest then
+		if  ctRegen1 or ctRegen2 then
 			blRegen := True;
 			blDroog := False;
 			blAlleVenstersOpen := False;
@@ -924,11 +927,7 @@ Task tError Autorun
 			Ft01_ZoutniveauLaag := False;
 		End_If;
 //*************************************Ft02_GeenComunicatie****************************************
-		if blTest then
-			Ft02_GeenComunicatie := true;
-		else
-			Ft02_GeenComunicatie := False;
-		End_If;
+	
 //*************************************Ft03_Brand****************************************
 		if not ctBrand then
 			Ft03_Brand := true;
