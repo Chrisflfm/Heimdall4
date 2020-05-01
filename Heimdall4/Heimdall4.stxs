@@ -93,6 +93,51 @@
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[stPoortOpen]]>
+			</Name>
+			<Flags>32785</Flags>
+			<HierarchyData>
+				<HierarchyState>2</HierarchyState>
+				<HierarchyDepth>0</HierarchyDepth>
+				<LastChild>0</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>199314168</ParentID>
+			</HierarchyData>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[stPoortOpen.TimerHi]]>
+			</Name>
+			<Flags>32769</Flags>
+			<HierarchyData>
+				<HierarchyState>0</HierarchyState>
+				<HierarchyDepth>1</HierarchyDepth>
+				<LastChild>0</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>199314168</ParentID>
+			</HierarchyData>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[stPoortOpen.TimerLo]]>
+			</Name>
+			<Flags>32769</Flags>
+			<HierarchyData>
+				<HierarchyState>0</HierarchyState>
+				<HierarchyDepth>1</HierarchyDepth>
+				<LastChild>1</LastChild>
+				<ConsiderHierarchy>0</ConsiderHierarchy>
+				<ParentID>199314168</ParentID>
+			</HierarchyData>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[blPoortTomIsOpen]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
 			<Flags>32769</Flags>
 		</Row>
 	</Rows>

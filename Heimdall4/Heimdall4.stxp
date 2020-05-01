@@ -679,7 +679,7 @@ Task tVeiligheden Autorun
 		blnotDeurPlatina := not ctDeurPlatina;
 	
 		if not ctBrand then
-			if not ctPoortDicht then
+			if ctPoortDicht then
 				blPulsPoort := True;
 			End_if;
 			blLampenPlatina := True;
