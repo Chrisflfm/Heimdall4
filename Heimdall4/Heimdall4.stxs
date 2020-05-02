@@ -138,6 +138,18 @@
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[blRegen]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[bldroog]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
 			<Flags>32769</Flags>
 		</Row>
 	</Rows>

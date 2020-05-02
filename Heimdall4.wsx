@@ -36,10 +36,13 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>634</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Line>652</Line>
-        <Column>39</Column>
+        <ViewScrollVert>674</ViewScrollVert>
+        <Line>697</Line>
+        <Column>10</Column>
+        <SelectionStartLine>697</SelectionStartLine>
+        <SelectionStartColumn>3</SelectionStartColumn>
+        <SelectionEndLine>697</SelectionEndLine>
+        <SelectionEndColumn>10</SelectionEndColumn>
       </ViewFrame>
     </Document>
     <Document>
@@ -66,7 +69,8 @@
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
-        <Row>15</Row>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
+        <Row>17</Row>
         <Column>1</Column>
         <SelectionStartChar>0</SelectionStartChar>
         <SelectionEndChar>0</SelectionEndChar>
@@ -85,9 +89,6 @@
     </Treenode>
     <Treenode>
       <Location>Heimdall4/Setup</Location>
-    </Treenode>
-    <Treenode>
-      <Location>Heimdall4/System Files</Location>
     </Treenode>
   </ExpandedTreenodes>
   <ExpandedTreeNodesHWM>
