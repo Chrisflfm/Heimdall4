@@ -150,6 +150,18 @@
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
+			<Name>
+				<![CDATA[ctRegen1]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[ctRegen1]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
 			<Flags>32769</Flags>
 		</Row>
 	</Rows>

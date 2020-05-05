@@ -692,9 +692,9 @@ Task tVeiligheden Autorun
 		End_If;
 //Regen
 		if not ctRegen1 and not ctRegen2 then
-			TimerStart(stRegenSensor,T#5m);
-		End_If
-		if TimerEnd (stRegenSensor) then
+		//	TimerStart(stRegenSensor,T#5m);
+		//End_If
+		//if TimerEnd (stRegenSensor) then
 			blRegen := False;
 			blDroog := True;
 		End_If;
