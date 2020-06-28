@@ -14,7 +14,7 @@
           <CreateDAFile>0</CreateDAFile>
           <DownloadDAFile>0</DownloadDAFile>
           <CreateExportFile>0</CreateExportFile>
-          <MonitorTask>0</MonitorTask>
+          <MonitorTask>1</MonitorTask>
           <DataDump>
             <CurrentGroupName />
             <ApplyChanges>1</ApplyChanges>
@@ -36,14 +36,10 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>921</ViewScrollVert>
+        <ViewScrollVert>105</ViewScrollVert>
         <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Line>697</Line>
-        <Column>0</Column>
-        <SelectionStartLine>694</SelectionStartLine>
-        <SelectionStartColumn>0</SelectionStartColumn>
-        <SelectionEndLine>697</SelectionEndLine>
-        <SelectionEndColumn>0</SelectionEndColumn>
+        <Line>125</Line>
+        <Column>15</Column>
       </ViewFrame>
     </Document>
     <Document>
@@ -70,7 +66,7 @@
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAALFGAAAAACBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
-        <Row>6</Row>
+        <Row>2</Row>
         <Column>3</Column>
         <SelectionStartChar>0</SelectionStartChar>
         <SelectionEndChar>0</SelectionEndChar>
@@ -89,6 +85,9 @@
     </Treenode>
     <Treenode>
       <Location>Heimdall4/Setup</Location>
+    </Treenode>
+    <Treenode>
+      <Location>Heimdall4/System Files</Location>
     </Treenode>
   </ExpandedTreenodes>
   <ExpandedTreeNodesHWM>

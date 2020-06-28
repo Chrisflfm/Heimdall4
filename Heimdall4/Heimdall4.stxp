@@ -71,90 +71,9 @@ Var
 	hrLampenPlatina:Bool	at %QX 100000515;//Lampen op terrein Platina + Industrieweg
 	hrPoortTom:		Bool	at %QX 100000516;//Poort Tom open/dicht
 
-//**********************Heimdall registers******************************
-//Temperaturen
-	ruimte_041_B2: 	Int		at %vl 1000100; //Temperatuur waarde van Heimdall
-	ruimte_042_B3: 	Int		at %vl 1000101; //Temperatuur waarde van Heimdall
-	ruimte_092_B4: 	Int		at %vl 1000102; //Temperatuur waarde van Heimdall
-	ruimte_061_B5: 	Int		at %vl 1000103; //Temperatuur waarde van Heimdall
-	ruimte_062_B6: 	Int		at %vl 1000104; //Temperatuur waarde van Heimdall
-	ruimte_081_B7: 	Int		at %vl 1000105; //Temperatuur waarde van Heimdall
-	ruimte_082_B8: 	Int		at %vl 1000106; //Temperatuur waarde van Heimdall
-	ruimte_091_B9: 	Int		at %vl 1000107; //Temperatuur waarde van Heimdall
-	Kasttemp1_B10: 		Int		at %vl 1000108; //Temperatuur waarde van Heimdall
-	KastTempK2: 		Int		at %vl 1000109; //Temperatuur waarde van Heimdall
-	ruimte_021_B20: 	Int		at %vl 1000110; //Temperatuur waarde van Heimdall
-	ruimte_022_B21: 	Int		at %vl 1000111; //Temperatuur waarde van Heimdall
-	ruimte_0141_B22: 	Int		at %vl 1000112; //Temperatuur waarde van Heimdall
-	ruimte_0142_B23: 	Int		at %vl 1000113; //Temperatuur waarde van Heimdall
-	ruimte_0151_B24: 	Int		at %vl 1000114; //Temperatuur waarde van Heimdall
-	ruimte_0152_B25: 	Int		at %vl 1000115; //Temperatuur waarde van Heimdall
-	ruimte_111_B29: 	Int		at %vl 1000116; //Temperatuur waarde van Heimdall
-	ruimte_1101_B30: 	Int		at %vl 1000117; //Temperatuur waarde van Heimdall
-	ruimte_1102_B31: 	Int		at %vl 1000118; //Temperatuur waarde van Heimdall
-	ruimte_1103_B32: 	Int		at %vl 1000119; //Temperatuur waarde van Heimdall
-	ruimte_111_B33: 	Int		at %vl 1000120; //Temperatuur waarde van Heimdall
-	ruimte_121_B34: 	Int		at %vl 1000121; //Temperatuur waarde van Heimdall
-	ruimte_122_B35: 	Int		at %vl 1000122; //Temperatuur waarde van Heimdall
-	ruimte_131_B36: 	Int		at %vl 1000123; //Temperatuur waarde van Heimdall
-	ruimte_132_B37: 	Int		at %vl 1000124; //Temperatuur waarde van Heimdall
-	ruimte_141_B38: 	Int		at %vl 1000125; //Temperatuur waarde van Heimdall
-	ruimte_171_B39: 	Int		at %vl 1000126; //Temperatuur waarde van Heimdall
-	ruimte_172_B40: 	Int		at %vl 1000127; //Temperatuur waarde van Heimdall
-	KastTemp3_B49: 		Int		at %vl 1000128; //Temperatuur waarde van Heimdall
-	KastTemp4_B50: 		Int		at %vl 1000129; //Temperatuur waarde van Heimdall
-	ruimte_19_B51: 		Int		at %vl 1000130; //Temperatuur waarde van Heimdall
-//ActTemp
-	ACTr_017_en_014: 	Int		at %vl 1000131; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_02_01:			Int		at %vl 1000132; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_05_09_Cnv3_4:	Int		at %vl 1000133; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_04_cnv1_2:		Int		at %vl 1000134; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_011_012_06:	Int		at %vl 1000135; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_015:			Int		at %vl 1000136; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_13_cnv5:		Int		at %vl 1000137; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_11_14_16:		Int		at %vl 1000138; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_12_cnv6:		Int		at %vl 1000139; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_08:			Int		at %vl 1000140; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_110_L_cnv7:	Int		at %vl 1000141; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_111:			Int		at %vl 1000142; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_17:			Int		at %vl 1000143; //Actuele zone temperatuur waarde van Heimdall
-	ACTr_110_R:			Int		at %vl 1000144; //Actuele zone temperatuur waarde van Heimdall
-//Setpunten
-	SPr_017_en_014: 	Int		at %vl 1000145; //Setpunt zone voor Heimdall
-	SPr_02_01:			Int		at %vl 1000146; //Setpunt zone voor Heimdall
-	SPr_05_09_Cnv3_4:	Int		at %vl 1000147; //Setpunt zone voor Heimdall
-	SPr_04_cnv1_2:		Int		at %vl 1000148; //Setpunt zone voor Heimdall
-	SPr_011_012_06:		Int		at %vl 1000149; //Setpunt zone voor Heimdall
-	SPr_015:			Int		at %vl 1000150; //Setpunt zone voor Heimdall
-	SPr_13_cnv5:		Int		at %vl 1000151; //Setpunt zone voor Heimdall
-	SPr_11_14_16:		Int		at %vl 1000152; //Setpunt zone voor Heimdall
-	SPr_12_cnv6:		Int		at %vl 1000153; //Setpunt zone voor Heimdall
-	SPr_08:				Int		at %vl 1000154; //Setpunt zone voor Heimdall
-	SPr_110_L_cnv7:		Int		at %vl 1000155; //Setpunt zone voor Heimdall
-	SPr_111:			Int		at %vl 1000156; //Setpunt zone voor Heimdall
-	SPr_17:				Int		at %vl 1000157; //Setpunt zone voor Heimdall
-	SPr_110_R:			Int		at %vl 1000158; //Setpunt zone voor Heimdall
-//Opdrachten voor Heimdall
-	KVr_017_en_014: 	Int		at %vl 1000159; //Koelen/verwarmen zone voor Heimdall
-	KVr_02_01:			Int		at %vl 1000160; //Koelen/verwarmen zone voor Heimdall
-	KVr_05_09_Cnv3_4:	Int		at %vl 1000161; //Koelen/verwarmen zone voor Heimdall
-	KVr_04_cnv1_2:		Int		at %vl 1000162; //Koelen/verwarmen zone voor Heimdall
-	KVr_011_012_06:		Int		at %vl 1000163; //Koelen/verwarmen zone voor Heimdall
-	KVr_015:			Int		at %vl 1000164; //Koelen/verwarmen zone voor Heimdall
-	KVr_13_cnv5:		Int		at %vl 1000165; //Koelen/verwarmen zone voor Heimdall
-	KVr_11_14_16:		Int		at %vl 1000166; //Koelen/verwarmen zone voor Heimdall
-	KVr_12_cnv6:		Int		at %vl 1000167; //Koelen/verwarmen zone voor Heimdall
-	KVr_08:				Int		at %vl 1000168; //Koelen/verwarmen zone voor Heimdall
-	KVr_110_L_cnv7:		Int		at %vl 1000169; //Koelen/verwarmen zone voor Heimdall
-	KVr_111:			Int		at %vl 1000170; //Koelen/verwarmen zone voor Heimdall
-	KVr_17:				Int		at %vl 1000171; //Koelen/verwarmen zone voor Heimdall
-	KVr_110_R:			Int		at %vl 1000172; //Koelen/verwarmen zone voor Heimdall
-	Ventileren:			Int		at %vl 1000173; //Ventileren aan (dakvensters open convectoren kleppen open volle snelheid)
-	AllesToe:			Int		at %vl 1000174; //alle dakvensters dicht convectoren kleppen dicht
-	
 	
 //**********************Programma variabelen en registers******************************
-//Register numbers: 1000000 ... 1001999
+
 // Flags
 	blLampenAan:			Bool	at %MX 1;	//Alle lampen aan
 	blLampen1Aan:			Bool	at %MX 2;	//Lampen kring 1 aan
@@ -202,9 +121,9 @@ Var
 	blZonnewering17:		Bool	at %MX 45;	//flag voor task veiligheden
 	blLampenTom:			Bool	at %MX 46;	//flag voor task veiligheden
 	blLampenPlatina:		Bool	at %MX 47;	//flag voor task veiligheden
-	res48:					Bool	at %MX 48;	//
-	res49:					Bool	at %MX 49;	//
-	res50:					Bool	at %MX 50;	//
+	blSetClock:				Bool	at %MX 48;	//set realtime clock
+	blVentilatie:			Bool	at %MX 49;	//vantilatie aan uit voor paneel
+	blklepToe:				Bool	at %MX 50;	//alles dicht aan uit voor paneel
 	res51:					Bool	at %MX 51;	//
 	blRegen:				Bool	at %MX 52;	//flag voor task veiligheden
 	blPoort:				Bool	at %MX 53;	//flag voor task veiligheden
@@ -223,8 +142,9 @@ Var
 	blNotBrand:				Bool	at %MX 66;	//vereenvoudeging
 	blNotInbraak:			Bool	at %MX 67;	//vereenvoudeging
 	blNotDeurPlatina:		Bool	at %MX 68;	//vereenvoudeging
+	blWaiting:				Bool;
 	
-
+//Register numbers: 1000000 ... 1001999
 // Registers
 	regActivatietijdvnstr:	Int		at %vl 1000000; //Tijd nodig om venster te openen of sluiten
 	regActivatietijdzon:	Int		at %vl 1000001; //Tijd nodig om zonnewering te openen of sluiten
@@ -239,6 +159,9 @@ Var
 	regUurPoortOpen:		Int		at %vl 1000010; //
 	regMinPoortOpen:		Int		at %vl 1000011; //
 	regAantDagPoortToe:		Int		at %vl 1000012; //
+	regHours:				Int		at %vl 1000013; //
+	regMinutes:				Int		at %vl 1000014; //
+	regSeconds:				Int		at %vl 1000015; //
 //**********************RTC**********************************************
 	Milliseconds:			Int		at %vl 102910; //
 	Seconds:				Int		at %vl 102911; //
@@ -270,8 +193,6 @@ End_var
 Task tMain Autorun
 //Init
 //Reset registers
-	Ventileren:=0;
-	AllesToe:=0;
 	regVensterComm:=0;
 	regZonweerComm:=0;
 //Reset flags
@@ -315,6 +236,7 @@ Task tMain Autorun
 	blZonnewering16 := False;
 	blZonnewering17 := False;
 	blRegen := False;
+	blSetClock := False;
 //Reset outputs
 	hrVenster1 := False;
 	hrVenster2 := False;
@@ -677,6 +599,14 @@ Task tVeiligheden Autorun
 		blnotBrand := not ctBrand;
 		blnotInbraak := not ctInbraak;
 		blnotDeurPlatina := not ctDeurPlatina;
+		
+		if not ctAlarmAan and blVentilatie then
+			blVentilatie := False;
+		End_if;
+		
+		if not ctAlarmAan and blklepToe then
+			blklepToe := False;
+		End_if;
 	
 		if not ctBrand then
 			if ctPoortDicht then
@@ -687,22 +617,25 @@ Task tVeiligheden Autorun
 		End_If;
 	
 		if not ctInbraak then
-			
 			blLampenTom := True;
 		End_If;
 //Regen
-		if not ctRegen1 and not ctRegen2 then
-		//	TimerStart(stRegenSensor,T#5m);
-		//End_If
-		//if TimerEnd (stRegenSensor) then
-			blRegen := False;
-			blDroog := True;
-		End_If;
-		if  ctRegen1 or ctRegen2 then
+		if ctregen1 or ctregen2 then 
 			blRegen := True;
-			blDroog := False;
-			blAlleVenstersOpen := False;
-		End_If;
+			blWaiting := False;
+		End_if
+		
+		if blRegen and not ctregen1 and not ctregen2 and not blWaiting then
+			TimerStart(stRegenSensor,T#5m);
+			blwaiting := True;
+		end_if
+
+		if blRegen and TimerEnd(stRegenSensor) and not ctregen1 and not ctregen2 then
+			blRegen := False;
+			blWaiting := False;
+		end_if
+		
+		blDroog := not blRegen;
 
 //Licht donker
 		if not ctSchemer then
@@ -713,6 +646,13 @@ Task tVeiligheden Autorun
 			blLicht := False;
 		End_if; 
 
+// set clock
+		if blSetClock then
+			Hours := regHours;
+			Minutes := regMinutes;
+			Seconds := regSeconds;
+			blSetClock := False;
+		End_if
 //*************************************Outputs**********************************************
 		
 		if blOpenDicht or blRegen or not ctAlarmAan then

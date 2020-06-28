@@ -13,151 +13,19 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[hours]]>
+				<![CDATA[ctAlarmAan]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[minutes]]>
+				<![CDATA[blVentilatie]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctPoortDicht]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[hrPoortTom]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[seconds]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[stRegenSensor]]>
-			</Name>
-			<Flags>32785</Flags>
-			<HierarchyData>
-				<HierarchyState>2</HierarchyState>
-				<HierarchyDepth>0</HierarchyDepth>
-				<LastChild>0</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>247546808</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[stRegenSensor.TimerHi]]>
-			</Name>
-			<Flags>32769</Flags>
-			<HierarchyData>
-				<HierarchyState>0</HierarchyState>
-				<HierarchyDepth>1</HierarchyDepth>
-				<LastChild>0</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>247546808</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[stRegenSensor.TimerLo]]>
-			</Name>
-			<Flags>32769</Flags>
-			<HierarchyData>
-				<HierarchyState>0</HierarchyState>
-				<HierarchyDepth>1</HierarchyDepth>
-				<LastChild>1</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>247546808</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blRegen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blDroog]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[stPoortOpen]]>
-			</Name>
-			<Flags>32785</Flags>
-			<HierarchyData>
-				<HierarchyState>2</HierarchyState>
-				<HierarchyDepth>0</HierarchyDepth>
-				<LastChild>0</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>199314168</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[stPoortOpen.TimerHi]]>
-			</Name>
-			<Flags>32769</Flags>
-			<HierarchyData>
-				<HierarchyState>0</HierarchyState>
-				<HierarchyDepth>1</HierarchyDepth>
-				<LastChild>0</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>199314168</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[stPoortOpen.TimerLo]]>
-			</Name>
-			<Flags>32769</Flags>
-			<HierarchyData>
-				<HierarchyState>0</HierarchyState>
-				<HierarchyDepth>1</HierarchyDepth>
-				<LastChild>1</LastChild>
-				<ConsiderHierarchy>0</ConsiderHierarchy>
-				<ParentID>199314168</ParentID>
-			</HierarchyData>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blPoortTomIsOpen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blRegen]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[bldroog]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctRegen1]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[ctRegen1]]>
+				<![CDATA[blAllesDicht]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
