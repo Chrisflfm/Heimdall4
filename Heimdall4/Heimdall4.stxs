@@ -13,19 +13,13 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[ctAlarmAan]]>
+				<![CDATA[Mot24VOke]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blVentilatie]]>
-			</Name>
-			<Flags>32769</Flags>
-		</Row>
-		<Row>
-			<Name>
-				<![CDATA[blAllesDicht]]>
+				<![CDATA[Ft07_24VDCMotoren]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
@@ -39,6 +33,6 @@
 		<ColumnWidthValue>80</ColumnWidthValue>
 		<ColumnWidthContent>130</ColumnWidthContent>
 		<ColumnWidthType>80</ColumnWidthType>
-		<ColumnWidthComment>1090</ColumnWidthComment>
+		<ColumnWidthComment>1098</ColumnWidthComment>
 	</Columns>
 </WinSym-SetupFile>

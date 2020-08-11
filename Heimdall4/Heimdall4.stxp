@@ -33,7 +33,8 @@ Var
 	ctZoutVatLek:	Bool	at %IX 100000313; //Lek in zoutvat ontharder
 	Reserve1:		Bool	at %IX 100000314; //Reserve
 	Reserve2:		Bool	at %IX 100000315; //Reserve
-	ctpltnlmpAan:	Bool	at %IX 100000316; //Reserve
+	ctpltnlmpAan:	Bool	at %IX 100000316; //
+	Mot24VOke:		Bool	at %IX 100000601; //24VDC2 motoren oke
 	
 	
 //Digitaal Output	
@@ -179,7 +180,7 @@ Var
 	Ft04_Inbraak:			Bool	at %MX 103;//Inbraak alarm bij TOM
 	Ft05_DeurPlatinaOpen:	Bool	at %MX 104;//Deur naar leufel Platina open
 	Ft06_WaterlekZoutvat:	Bool	at %MX 105;//Water in lekbak ontharder
-	Ft07_OpenDichtRelais:	Bool	at %MX 106;//relais sturing fout
+	Ft07_24VDCMotoren:		Bool	at %MX 106;//fout voeding motoren
 
 //**********************Timers********************************************
 	stVensters: 			Timer;
@@ -894,15 +895,19 @@ Task tError Autorun
 		else
 			Ft06_WaterlekZoutvat := False;
 		End_If;
-//*************************************Ft07****************************************		
-	
+//*************************************Ft07_24VDCMotoren****************************************		
+		if not Mot24VOke then
+			Ft07_24VDCMotoren := True;
+		else
+			Ft07_24VDCMotoren := False;
+		End_if;
 	
 //*************************************foutaanwezig****************************************		
-		if Ft01_ZoutniveauLaag or Ft02_GeenComunicatie or Ft03_Brand or Ft04_Inbraak or Ft05_DeurPlatinaOpen or Ft06_WaterlekZoutvat or Ft07_OpenDichtRelais then
+		if Ft01_ZoutniveauLaag or Ft02_GeenComunicatie or Ft03_Brand or Ft04_Inbraak or Ft05_DeurPlatinaOpen or Ft06_WaterlekZoutvat or Ft07_24VDCMotoren then
 			blnoAlarm := False;
 			blAlarm := True
 		end_if;
-		if not Ft01_ZoutniveauLaag and not Ft02_GeenComunicatie  and not Ft03_Brand  and not Ft04_Inbraak  and not Ft05_DeurPlatinaOpen  and not Ft06_WaterlekZoutvat and not Ft07_OpenDichtRelais then
+		if not Ft01_ZoutniveauLaag and not Ft02_GeenComunicatie  and not Ft03_Brand  and not Ft04_Inbraak  and not Ft05_DeurPlatinaOpen  and not Ft06_WaterlekZoutvat and not Ft07_24VDCMotoren then
 			blnoAlarm := True;
 			blAlarm := False
 		end_if;
