@@ -13,13 +13,25 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[Mot24VOke]]>
+				<![CDATA[regMinLampAan]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[Ft07_24VDCMotoren]]>
+				<![CDATA[regUurLampAan]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[regMinLampUit]]>
+			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Name>
+				<![CDATA[regUurLampUit]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>

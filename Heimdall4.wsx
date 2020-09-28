@@ -34,24 +34,24 @@
     <Document>
       <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAJICAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAMBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>874</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Line>905</Line>
-        <Column>134</Column>
-        <SelectionStartLine>905</SelectionStartLine>
-        <SelectionStartColumn>130</SelectionStartColumn>
-        <SelectionEndLine>905</SelectionEndLine>
-        <SelectionEndColumn>134</SelectionEndColumn>
+        <ViewScrollVert>522</ViewScrollVert>
+        <Line>545</Line>
+        <Column>21</Column>
+        <SelectionStartLine>545</SelectionStartLine>
+        <SelectionStartColumn>6</SelectionStartColumn>
+        <SelectionEndLine>545</SelectionEndLine>
+        <SelectionEndColumn>21</SelectionEndColumn>
       </ViewFrame>
     </Document>
     <Document>
       <ViewFrame>
         <DocPathName>HWM:Heimdall4 System\Release\Hardware\Network\JC-340\CPU</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAJICAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAMBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
         <ViewScrollVert>0</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
         <Project>Heimdall4</Project>
         <Config>Release</Config>
         <MDIWindowID>CPU</MDIWindowID>
@@ -67,10 +67,10 @@
     <Document>
       <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxs</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAJICAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAMBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
-        <Row>3</Row>
+        <Row>4</Row>
         <Column>1</Column>
         <SelectionStartChar>0</SelectionStartChar>
         <SelectionEndChar>0</SelectionEndChar>
@@ -89,9 +89,6 @@
     </Treenode>
     <Treenode>
       <Location>Heimdall4/Setup</Location>
-    </Treenode>
-    <Treenode>
-      <Location>Heimdall4/System Files</Location>
     </Treenode>
   </ExpandedTreenodes>
   <ExpandedTreeNodesHWM>
