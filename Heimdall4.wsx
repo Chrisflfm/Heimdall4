@@ -14,7 +14,7 @@
           <CreateDAFile>0</CreateDAFile>
           <DownloadDAFile>0</DownloadDAFile>
           <CreateExportFile>0</CreateExportFile>
-          <MonitorTask>1</MonitorTask>
+          <MonitorTask>0</MonitorTask>
           <DataDump>
             <CurrentGroupName />
             <ApplyChanges>1</ApplyChanges>
@@ -36,13 +36,10 @@
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAMBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>522</ViewScrollVert>
-        <Line>545</Line>
-        <Column>21</Column>
-        <SelectionStartLine>545</SelectionStartLine>
-        <SelectionStartColumn>6</SelectionStartColumn>
-        <SelectionEndLine>545</SelectionEndLine>
-        <SelectionEndColumn>21</SelectionEndColumn>
+        <ViewScrollVert>553</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
+        <Line>562</Line>
+        <Column>0</Column>
       </ViewFrame>
     </Document>
     <Document>
@@ -51,7 +48,6 @@
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAMBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
         <ViewScrollVert>0</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
         <Project>Heimdall4</Project>
         <Config>Release</Config>
         <MDIWindowID>CPU</MDIWindowID>
@@ -70,8 +66,8 @@
         <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAMBCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
-        <Row>4</Row>
-        <Column>1</Column>
+        <Row>12</Row>
+        <Column>3</Column>
         <SelectionStartChar>0</SelectionStartChar>
         <SelectionEndChar>0</SelectionEndChar>
       </ViewFrame>

@@ -23,8 +23,8 @@ Var
 	ctRegen1:		Bool	at %IX 100000303; //Regensensor nr 1
 	ctRegen2:		Bool	at %IX 100000304; //Regensensor nr 2
 	ctSchemer:		Bool	at %IX 100000305; //Schemerschakelaar
-	ctAlarmAan:		Bool	at %IX 100000306; //Alarm ingeschakeld
-	ctAlarmUit:		Bool	at %IX 100000307; //Alarm uitgeschakeld
+	ctAlarmAan:		Bool	at %IX 100000307; //Alarm ingeschakeld
+	ctAlarmUit:		Bool	at %IX 100000306; //Alarm uitgeschakeld
 	ctBrand:		Bool	at %IX 100000308; //Brand
 	ctInbraak:		Bool	at %IX 100000309; //Inbraak TOM
 	ctDeurPlatina:	Bool	at %IX 100000310; //Deur luifel Platina open
@@ -144,6 +144,7 @@ Var
 	blNotInbraak:			Bool	at %MX 67;	//vereenvoudeging
 	blNotDeurPlatina:		Bool	at %MX 68;	//vereenvoudeging
 	blWaiting:				Bool;
+	blPoort30MinPauze:		Bool;
 	
 //Register numbers: 1000000 ... 1001999
 // Registers
@@ -238,6 +239,7 @@ Task tMain Autorun
 	blZonnewering17 := False;
 	blRegen := False;
 	blSetClock := False;
+	blPoort30MinPauze := False;
 //Reset outputs
 	hrVenster1 := False;
 	hrVenster2 := False;
@@ -293,7 +295,7 @@ Task tMain Autorun
 	Else
 		blAlleVenstersToe := False;
 	End_if;
-	if (blRegen or not ctAlarmAan) and not blAlleVenstersToe then
+	if (blRegen or ctAlarmAan) and not blAlleVenstersToe then
 		blAlleVenstersDicht := True;
 	End_if;
 
@@ -543,7 +545,7 @@ Task tMain Autorun
 			blManLampenAan := False
 		End_If;
 	
-		if (blAutoLampenAan and ctSchemer and not ctPoortDicht and blNotAlarmAan) or blLampen1Aan then
+		if (blAutoLampenAan and ctSchemer and ctAlarmUit) or (ctSchemer and ctAlarmUit) or (ctSchemer and not ctPoortDicht) or blLampen1Aan then
 			blLampenTom := True;
 		else
 			blLampenTom := False;
@@ -558,12 +560,13 @@ Task tMain Autorun
 		End_If;
 		
 //*************************************Sturing Poort**********************************************
-
+	
 		if (Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and ctPoortDicht and not blPoortTomIsOpen) then
 			if  regAantDagPoortToe == 0 then
 				blPoort := True;
 				blPoortTomIsOpen := True;
 				TimerStart(stPoortOpen,T#30m);//regActivatietijdzonweer);// Timer is set to 30m and started.
+				blPoort30MinPauze = True;
 			else
 				 regAantDagPoortToe :=  regAantDagPoortToe - 1;
 			End_if;
@@ -573,8 +576,9 @@ Task tMain Autorun
 			blPoortTomIsOpen := False; // reset na middernacht
 		End_If;
 		
-		if TimerEnd(stPoortOpen) and not ctAlarmAan and not ctPoortDicht then
+		if TimerEnd(stPoortOpen) and ctAlarmAan and not ctPoortDicht and blPoort30MinPauze then
 			blPoort := True;
+			blPoort30MinPauze := False;
 		End_If;
 		
 		if blPoort or blPulsPoort then
@@ -595,17 +599,17 @@ Task tVeiligheden Autorun
 	While True Do
 //*************************************Alarm**********************************************
 //Alarm
-		blnotAlarmAan := not ctAlarmAan;
-		blnotAlarmUit := not ctAlarmUit;
+		blnotAlarmAan := ctAlarmAan;
+		blnotAlarmUit := ctAlarmUit;
 		blnotBrand := not ctBrand;
 		blnotInbraak := not ctInbraak;
 		blnotDeurPlatina := not ctDeurPlatina;
 		
-		if not ctAlarmAan and blVentilatie then
+		if ctAlarmAan and blVentilatie then
 			blVentilatie := False;
 		End_if;
 		
-		if not ctAlarmAan and blklepToe then
+		if ctAlarmAan and blklepToe then
 			blklepToe := False;
 		End_if;
 	
@@ -656,7 +660,7 @@ Task tVeiligheden Autorun
 		End_if
 //*************************************Outputs**********************************************
 		
-		if blOpenDicht or blRegen or not ctAlarmAan then
+		if blOpenDicht or blRegen or ctAlarmAan then
 			hrOpenDicht := true
 		else
 			hrOpenDicht := false
