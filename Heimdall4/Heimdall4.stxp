@@ -545,7 +545,7 @@ Task tMain Autorun
 			blManLampenAan := False
 		End_If;
 	
-		if (blAutoLampenAan and ctSchemer and ctAlarmUit) or (ctSchemer and ctAlarmUit) or (ctSchemer and not ctPoortDicht) or blLampen1Aan then
+		if (blAutoLampenAan and ctSchemer) or (ctSchemer and ctAlarmUit) or (ctSchemer and not ctPoortDicht) or blLampen1Aan then
 			blLampenTom := True;
 		else
 			blLampenTom := False;
