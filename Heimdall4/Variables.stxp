@@ -1,0 +1,261 @@
+Var
+// *********************In en outputs*********************************
+//Digitaal Input
+	ctV1Dicht:		Bool	at %IX 100000201; //Venster 1 dicht
+	ctV2Dicht:		Bool	at %IX 100000202; //Venster 2 dicht
+	ctV3Dicht:		Bool	at %IX 100000203; //Venster 3 dicht
+	ctV4Dicht:		Bool	at %IX 100000204; //Vensteer4 dicht
+	ctV5Dicht:		Bool	at %IX 100000205; //Venster 5 dicht
+	ctV6Dicht:		Bool	at %IX 100000206; //Venster 6 dicht
+	ctV7Dicht:		Bool	at %IX 100000207; //Venster 7 dicht
+	ctV8Dicht:		Bool	at %IX 100000208; //Venster 8 dicht
+	ctV9Dicht:		Bool	at %IX 100000209; //Venster 9 dicht
+	ctV10Dicht:		Bool	at %IX 100000210; //Venster 10 dicht
+	ctV11Dicht:		Bool	at %IX 100000211; //Venster 11 dicht
+	ctV12Dicht:		Bool	at %IX 100000212; //Venster 12 dicht
+	ctV13Dicht:		Bool	at %IX 100000213; //Venster 13 dicht
+	ctV14Dicht:		Bool	at %IX 100000214; //Venster 14 dicht
+	ctV15Dicht:		Bool	at %IX 100000215; //Venster 15 dicht
+	ctV16Dicht:		Bool	at %IX 100000216; //Venster 16 dicht
+	
+	ctV17Dicht:		Bool	at %IX 100000301; //Venster 17 dicht
+	ctV18Dicht:		Bool	at %IX 100000302; //Venster 18 dicht
+	ctRegen1:		Bool	at %IX 100000303; //Regensensor nr 1
+	ctRegen2:		Bool	at %IX 100000304; //Regensensor nr 2
+	ctSchemer:		Bool	at %IX 100000305; //Schemerschakelaar
+	ctAlarmAan:		Bool	at %IX 100000307; //Alarm ingeschakeld
+	ctAlarmUit:		Bool	at %IX 100000306; //Alarm uitgeschakeld
+	ctBrand:		Bool	at %IX 100000308; //Brand
+	ctInbraak:		Bool	at %IX 100000309; //Inbraak TOM
+	ctDeurPlatina:	Bool	at %IX 100000310; //Deur luifel Platina open
+	ctPoortDicht:	Bool	at %IX 100000311; //Buiten poort dicht
+	ctZoutLaag:		Bool	at %IX 100000312; //Laag zoutniveau ontharder
+	ctZoutVatLek:	Bool	at %IX 100000313; //Lek in zoutvat ontharder
+	Reserve1:		Bool	at %IX 100000314; //Reserve
+	Reserve2:		Bool	at %IX 100000315; //Reserve
+	ctpltnlmpAan:	Bool	at %IX 100000316; //
+	Mot24VOke:		Bool	at %IX 100000601; //24VDC2 motoren oke
+	
+	
+//Digitaal Output	
+	hrVenster1:		Bool	at %QX 100000401; //Venster 1 activeren
+	hrVenster2:		Bool	at %QX 100000402; //Venster 2 activeren
+	hrVenster3:		Bool	at %QX 100000403; //Venster 3 activeren
+	hrVenster4:		Bool	at %QX 100000404; //Venster 4 activeren
+	hrVenster5:		Bool	at %QX 100000405; //Venster 5 activeren
+	hrVenster6:		Bool	at %QX 100000406; //Venster 6 activeren
+	hrVenster7:		Bool	at %QX 100000407; //Venster 7 activeren
+	hrVenster8:		Bool	at %QX 100000408; //Venster 8 activeren
+	hrVenster9:		Bool	at %QX 100000409; //Venster 9 activeren
+	hrVenster10:	Bool	at %QX 100000410; //Venster 10 activeren
+	hrVenster11:	Bool	at %QX 100000411; //Venster 11 activeren
+	hrVenster12:	Bool	at %QX 100000412; //Venster 12 activeren
+	hrVenster13:	Bool	at %QX 100000413; //Venster 13 activeren
+	hrVenster14:	Bool	at %QX 100000414; //Venster 14 activeren
+	hrVenster15:	Bool	at %QX 100000415; //Venster 15 activeren
+	hrVenster16:	Bool	at %QX 100000416; //Venster 16 activeren
+	
+	hrVenster17:	Bool	at %QX 100000501; //Venster 17 activeren
+	hrVenster18:	Bool	at %QX 100000502; //Venster 18 activeren
+	hrZonnewering1:	Bool	at %QX 100000503; //Zonnewering 1 activeren
+	hrZonnewering3:	Bool	at %QX 100000504; //Zonnewering 1 activeren
+	hrZonnewering4:	Bool	at %QX 100000505; //Zonnewering 1 activeren
+	hrZonnewering5:	Bool	at %QX 100000506; //Zonnewering 1 activeren
+	hrZonnewering6:	Bool	at %QX 100000507; //Zonnewering 1 activeren
+	hrZonnewering12:Bool	at %QX 100000508; //Zonnewering 1 activeren
+	hrZonnewering13:Bool	at %QX 100000509; //Zonnewering 1 activeren
+	hrZonnewering15:Bool	at %QX 100000510; //Zonnewering 1 activeren
+	hrZonnewering16:Bool	at %QX 100000511;//Zonnewering 1 activeren
+	hrZonnewering17:Bool	at %QX 100000512;//Zonnewering 1 activeren
+	hrOpenDicht:	Bool	at %QX 100000513;//Polariteit omschakelen
+	hrLampenTom:	Bool	at %QX 100000514;//Lampen op terrein TOM
+	hrLampenPlatina:Bool	at %QX 100000515;//Lampen op terrein Platina + Industrieweg
+	hrPoortTom:		Bool	at %QX 100000516;//Poort Tom open/dicht
+
+	
+//**********************Programma variabelen en registers******************************
+
+// Flags
+	blLampenAan:			Bool	at %MX 1;	//Alle lampen aan
+	blLampen1Aan:			Bool	at %MX 2;	//Lampen kring 1 aan
+	blLampen2Aan:			Bool	at %MX 3;	//Lampen kring 2 aan
+	blLampen3Aan:			Bool	at %MX 4;	//Lampen kring 3 aan
+	blAlleVenstersDicht: 	Bool	at %MX 5;	//Alle dakvensters sluiten
+	blAlleVenstersOpen:		Bool	at %MX 6;	//Alle dakvensters openen
+	blAlleZonweerDicht: 	Bool	at %MX 7;	//Alle zonneweringen openen
+	blAlleZonweerOpen:		Bool	at %MX 8;	//Alle zonneweringen sluiten
+	blPulsPoort:			Bool	at %MX 9;	//Puls naar poort
+	blPoortTomIsOpen:		Bool	at %MX 10;	//poort is 's morgens opgestuurd
+	blPoortTom:				Bool	at %MX 11;	//flag voor output
+	blOpenDicht:			Bool	at %MX 12;	//Voor ompool relais
+	blTest:					Bool	at %MX 13;	//
+	blDroog:				Bool	at %MX 14;	//Voor pannel, het is droog buiten
+	blAutoLampenAan:		Bool	at %MX 15;	//True = lampen aan als schemerschakelaar aan
+	blManLampenAan:			Bool	at %MX 16;	//True = lampen aan in handbediening
+	blVenster1:				Bool	at %MX 18;	//flag voor task veiligheden
+	blVenster2:				Bool	at %MX 19;	//flag voor task veiligheden
+	blVenster3:				Bool	at %MX 20;	//flag voor task veiligheden
+	blVenster4:				Bool	at %MX 21;	//flag voor task veiligheden
+	blVenster5:				Bool	at %MX 22;	//flag voor task veiligheden
+	blVenster6:				Bool	at %MX 23;	//flag voor task veiligheden
+	blVenster7:				Bool	at %MX 24;	//flag voor task veiligheden
+	blVenster8:				Bool	at %MX 25;	//flag voor task veiligheden
+	blVenster9:				Bool	at %MX 26;	//flag voor task veiligheden
+	blVenster10:			Bool	at %MX 27;	//flag voor task veiligheden
+	blVenster11:			Bool	at %MX 28;	//flag voor task veiligheden
+	blVenster12:			Bool	at %MX 29;	//flag voor task veiligheden
+	blVenster13:			Bool	at %MX 30;	//flag voor task veiligheden
+	blVenster14:			Bool	at %MX 31;	//flag voor task veiligheden
+	blVenster15:			Bool	at %MX 32;	//flag voor task veiligheden
+	blVenster16:			Bool	at %MX 33;	//flag voor task veiligheden
+	blVenster17:			Bool	at %MX 34;	//flag voor task veiligheden
+	blVenster18:			Bool	at %MX 35;	//flag voor task veiligheden
+	blZonnewering1:			Bool	at %MX 36;	//flag voor task veiligheden
+	blZonnewering3:			Bool	at %MX 37;	//flag voor task veiligheden
+	blZonnewering4:			Bool	at %MX 38;	//flag voor task veiligheden
+	blZonnewering5:			Bool	at %MX 39;	//flag voor task veiligheden
+	blZonnewering6:			Bool	at %MX 40;	//flag voor task veiligheden
+	blZonnewering12:		Bool	at %MX 41;	//flag voor task veiligheden
+	blZonnewering13:		Bool	at %MX 42;	//flag voor task veiligheden
+	blZonnewering15:		Bool	at %MX 43;	//flag voor task veiligheden
+	blZonnewering16:		Bool	at %MX 44;	//flag voor task veiligheden
+	blZonnewering17:		Bool	at %MX 45;	//flag voor task veiligheden
+	blLampenTom:			Bool	at %MX 46;	//flag voor task veiligheden
+	blLampenPlatina:		Bool	at %MX 47;	//flag voor task veiligheden
+	blSetClock:				Bool	at %MX 48;	//set realtime clock
+	blVentilatie:			Bool	at %MX 49;	//vantilatie aan uit voor paneel
+	blklepToe:				Bool	at %MX 50;	//alles dicht aan uit voor paneel
+	res51:					Bool	at %MX 51;	//
+	blRegen:				Bool	at %MX 52;	//flag voor task veiligheden
+	blPoort:				Bool	at %MX 53;	//flag voor task veiligheden
+	blVensterDicht: 		Bool	at %MX 54;	//Alle dakvensters sluiten
+	blVensterOpen:			Bool	at %MX 55;	//Alle dakvensters openen
+	blZonweerDicht: 		Bool	at %MX 56;	//Alle zonneweringen openen
+	blZonweerOpen:			Bool	at %MX 57;	//Alle zonneweringen sluiten
+	blLicht:				Bool	at %MX 58;	//Voor pannel, het is licht buiten
+	blDonker:				Bool	at %MX 59;	//Voor pannel, het is donker buiten
+	blnoAlarm:				Bool	at %MX 60;	//Voor pannel, er is geen alarm
+	blAlarm:				Bool	at %MX 61;	//Voor pannel, er is alarm
+	blAlleVenstersToe:		Bool	at %MX 62;	//vereenvoudeging
+	blPoolOm:				Bool	at %MX 63;	//vereenvoudeging
+	blNotAlarmAan:			Bool	at %MX 64;	//vereenvoudeging
+	blNotAlarmUit:			Bool	at %MX 65;	//vereenvoudeging
+	blNotBrand:				Bool	at %MX 66;	//vereenvoudeging
+	blNotInbraak:			Bool	at %MX 67;	//vereenvoudeging
+	blNotDeurPlatina:		Bool	at %MX 68;	//vereenvoudeging
+	flGroep2AanUit:			Bool	at %MX 69;	//Flag voor modus Groep Heimdall.py
+	flGroep8AanUit:			Bool	at %MX 70;	//Flag voor modus Groep Heimdall.py
+	flGroep7AanUit:			Bool	at %MX 71;	//Flag voor modus Groep Heimdall.py
+	flGroep9AanUit:			Bool	at %MX 72;	//Flag voor modus Groep Heimdall.py
+	flGroep12AanUit:		Bool	at %MX 73;	//Flag voor modus Groep Heimdall.py
+	flGroep7:				Bool	at %MX 74;	//Flag voor modus Groep Heimdall.py
+	flGroep8:				Bool	at %MX 75;	//Flag voor modus Groep Heimdall.py
+	flGroep9:				Bool	at %MX 76;	//Flag voor modus Groep Heimdall.py
+	flGroep2VVofConv:		Bool	at %MX 77;	//Flag voor modus Groep Heimdall.py
+	flGroep9VVofConv:		Bool	at %MX 78;	//Flag voor modus Groep Heimdall.py
+	flGroep12:				Bool	at %MX 79;	//Flag voor modus Groep Heimdall.py
+	flGroep12VVofConv:		Bool	at %MX 80;	//Flag voor modus Groep Heimdall.py
+	flGroep2:				Bool	at %MX 81;	//Flag voor modus Groep Heimdall.py
+	flres17:				Bool	at %MX 88;	//Flag voor modus Groep Heimdall.py
+	blWaiting:				Bool;
+	blPoort30MinPauze:		Bool;
+	
+//Register numbers: 1000000 ... 1001999
+// Registers
+	regActivatietijdvnstr:	Int		at %vl 1000000; //Tijd nodig om venster te openen of sluiten
+	regActivatietijdzon:	Int		at %vl 1000001; //Tijd nodig om zonnewering te openen of sluiten
+	regVensterNr:			Int		at %vl 1000002; //Nr van het venster dat gecomandeerd wordt
+	regZonweerNr:			Int		at %vl 1000003; //Nr van de zonnewering die gecomandeerd wordt
+	regVensterComm:			Int		at %vl 1000004; //Commando van het venster dat gecomandeerd wordt 0 = stop 1 = open 2 = dicht
+	regZonweerComm:			Int		at %vl 1000005; //Commando van de zonnewering die gecomandeerd wordt 0 = stop 1 = open 2 = dicht
+	regUurLampAan:			Int		at %vl 1000006; //
+	regUurLampUit:			Int		at %vl 1000007; //
+	regMinLampAan:			Int		at %vl 1000008; //
+	regMinLampUit:			Int		at %vl 1000009; //
+	regUurPoortOpen:		Int		at %vl 1000010; //
+	regMinPoortOpen:		Int		at %vl 1000011; //
+	regAantDagPoortToe:		Int		at %vl 1000012; //
+	regHours:				Int		at %vl 1000013; //
+	regMinutes:				Int		at %vl 1000014; //
+	regSeconds:				Int		at %vl 1000015; //
+	regRebootCounter:		Int		at %vl 1000016; //
+	
+	res1kleur:				Int		at %vl 1000017;	//modus Groep Heimdall.py
+	Groep2kleur:			Int		at %vl 1000018;	//modus Groep Heimdall.py
+	res3kleur:				Int		at %vl 1000019;	//modus Groep Heimdall.py
+	res4kleur:				Int		at %vl 1000020;	//modus Groep Heimdall.py
+	res5kleur:				Int		at %vl 1000021;	//modus Groep Heimdall.py
+	Groep7kleur:			Int		at %vl 1000022;	//modus Groep Heimdall.py
+	Groep8kleur:			Int		at %vl 1000023;	//modus Groep Heimdall.py
+	Groep9kleur:			Int		at %vl 1000024;	//modus Groep Heimdall.py
+	res10kleur:				Int		at %vl 1000025;	//modus Groep Heimdall.py
+	res11kleur:				Int		at %vl 1000026;	//modus Groep Heimdall.py
+	Groep12kleur:			Int		at %vl 1000027;	//modus Groep Heimdall.py
+	res13kleur:				Int		at %vl 1000028;	//modus Groep Heimdall.py
+	res15kleur:				Int		at %vl 1000029;	//modus Groep Heimdall.py
+	res17kleur:				Int		at %vl 1000030;	//modus Groep Heimdall.py
+	
+	Groep1Modus:			Int		at %vl 1000031;	//modus Groep Heimdall.py
+	Groep2Modus:			Int		at %vl 1000032;	//modus Groep Heimdall.py
+	Groep3Modus:			Int		at %vl 1000033;	//modus Groep Heimdall.py
+	Groep4Modus:			Int		at %vl 1000034;	//modus Groep Heimdall.py
+	Groep5Modus:			Int		at %vl 1000035;	//modus Groep Heimdall.py
+	Groep7Modus:			Int		at %vl 1000036;	//modus Groep Heimdall.py
+	Groep8Modus:			Int		at %vl 1000037;	//modus Groep Heimdall.py
+	Groep9Modus:			Int		at %vl 1000038;	//modus Groep Heimdall.py
+	Groep10Modus:			Int		at %vl 1000039;	//modus Groep Heimdall.py
+	Groep11Modus:			Int		at %vl 1000040;	//modus Groep Heimdall.py
+	Groep12Modus:			Int		at %vl 1000041;	//modus Groep Heimdall.py
+	Groep13Modus:			Int		at %vl 1000042;	//modus Groep Heimdall.py
+	Groep15Modus:			Int		at %vl 1000043;	//modus Groep Heimdall.py
+	Groep17Modus:			Int		at %vl 1000044;	//modus Groep Heimdall.py
+	
+//**********************OPC**********************************************
+	q:					float 	at %vl 1000100; //
+	w:					float	at %vl 1000101; //
+	e:					float	at %vl 1000102; //
+	r:					float	at %vl 1000103; //
+	t:					float	at %vl 1000104; //
+	y:					float	at %vl 1000105; //
+	u:					float	at %vl 1000106; //
+	i:					float	at %vl 1000107; //
+	o:					float	at %vl 1000108; //
+	p:					float	at %vl 1000109; //
+	a:					float	at %vl 1000110; //
+	s:					float	at %vl 1000111; //
+	d:					float	at %vl 1000112; //
+	
+
+
+//**********************RTC**********************************************
+	Milliseconds:			Int		at %vl 102910; //
+	Seconds:				Int		at %vl 102911; //
+	Minutes:				Int		at %vl 102912; //
+	Hours:					Int		at %vl 102913; //
+	Weekday:				Int		at %vl 102914; //Weekday (0 = Sunday)
+	Day:					Int		at %vl 102915; //
+	Month:					Int		at %vl 102916; //
+	Year:					Int		at %vl 102917; //
+	
+//**********************Fouten*******************************************
+	Ft01_ZoutniveauLaag:	Bool	at %MX 100;//Zout niveau in ontharder laag
+	Ft02_GeenComunicatie:	Bool	at %MX 101;//Geen comuinicatie met Heimdall
+	Ft03_Brand:				Bool	at %MX 102;//Brand alarm bij TOM
+	Ft04_Inbraak:			Bool	at %MX 103;//Inbraak alarm bij TOM
+	Ft05_DeurPlatinaOpen:	Bool	at %MX 104;//Deur naar leufel Platina open
+	Ft06_WaterlekZoutvat:	Bool	at %MX 105;//Water in lekbak ontharder
+	Ft07_24VDCMotoren:		Bool	at %MX 106;//fout voeding motoren
+
+//**********************Timers********************************************
+	stVensters: 			Timer;
+	stPoortPuls: 			Timer;
+	stPoortOpen: 			Timer;
+	stRegenSensor:			Timer;
+	stLampenTimer:			Timer;
+	
+//*********************geheugen registers**********************************
+	aanTijd:				float;
+	uitTijd:				float;
+	actueleTijd:			float;
+
+End_var

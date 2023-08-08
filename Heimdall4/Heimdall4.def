@@ -3,7 +3,8 @@
 
 .TASK #16777216 "tMain"
 .TASK #16777217 "tVeiligheden"
-.TASK #16777218 "tError"
+.TASK #16777218 "tPython"
+.TASK #16777219 "tError"
 .INTERN #1280 "TaskSetPriority"
 .INTERN #1281 "TaskSetCycleTimeAndPriority"
 .INTERN #1282 "TaskGetRuntimeInPromille"

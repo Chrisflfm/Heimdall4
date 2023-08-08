@@ -13,98 +13,113 @@
 	<Rows>
 		<Row>
 			<Name>
-				<![CDATA[regMinLampAan]]>
+				<![CDATA[Groep1Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[regUurLampAan]]>
+				<![CDATA[Groep2Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[regMinLampUit]]>
+				<![CDATA[Groep3Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[regUurLampUit]]>
+				<![CDATA[Groep4Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blAutoLampenAan]]>
+				<![CDATA[Groep5Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctSchemer]]>
+				<![CDATA[Groep7Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctPoortDicht]]>
+				<![CDATA[Groep8Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blNotAlarmAan]]>
+				<![CDATA[Groep9Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blLampen1Aan]]>
+				<![CDATA[Groep10modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[blLampenTom]]>
+				<![CDATA[Groep11modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctAlarmAan]]>
+				<![CDATA[Groep12Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[ctAlarmUit]]>
+				<![CDATA[Groep13Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[regMinPoortOpen]]>
+				<![CDATA[Groep15Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[regUurPoortOpen]]>
+				<![CDATA[Groep17Modus]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
 			<Name>
-				<![CDATA[hours]]>
+				<![CDATA[flGroep8AanUit]]>
 			</Name>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
-			<Name>
-				<![CDATA[minutes]]>
-			</Name>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
+			<Flags>32769</Flags>
+		</Row>
+		<Row>
 			<Flags>32769</Flags>
 		</Row>
 		<Row>
@@ -117,6 +132,6 @@
 		<ColumnWidthValue>80</ColumnWidthValue>
 		<ColumnWidthContent>130</ColumnWidthContent>
 		<ColumnWidthType>80</ColumnWidthType>
-		<ColumnWidthComment>1098</ColumnWidthComment>
+		<ColumnWidthComment>1106</ColumnWidthComment>
 	</Columns>
 </WinSym-SetupFile>

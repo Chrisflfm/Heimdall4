@@ -14,7 +14,7 @@
           <CreateDAFile>0</CreateDAFile>
           <DownloadDAFile>0</DownloadDAFile>
           <CreateExportFile>0</CreateExportFile>
-          <MonitorTask>0</MonitorTask>
+          <MonitorTask>-1</MonitorTask>
           <DataDump>
             <CurrentGroupName />
             <ApplyChanges>1</ApplyChanges>
@@ -34,20 +34,20 @@
     <Document>
       <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxp</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAJKCAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAAJGGAAAAAFHCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
-        <ViewScrollVert>517</ViewScrollVert>
-        <IsActiveChildFrame>1</IsActiveChildFrame>
-        <Line>528</Line>
-        <Column>9</Column>
+        <ViewScrollVert>777</ViewScrollVert>
+        <Line>806</Line>
+        <Column>16</Column>
       </ViewFrame>
     </Document>
     <Document>
       <ViewFrame>
         <DocPathName>HWM:Heimdall4 System\Release\Hardware\Network\JC-340\CPU</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAJKCAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAAJGGAAAAAFHCAAAAA</WindowPlacement>
         <ViewScrollHoriz>0</ViewScrollHoriz>
         <ViewScrollVert>0</ViewScrollVert>
+        <IsActiveChildFrame>1</IsActiveChildFrame>
         <Project>Heimdall4</Project>
         <Config>Release</Config>
         <MDIWindowID>CPU</MDIWindowID>
@@ -62,12 +62,26 @@
     </Document>
     <Document>
       <ViewFrame>
+        <DocPathName>.\Heimdall4\Variables.stxp</DocPathName>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAAJGGAAAAAFHCAAAAA</WindowPlacement>
+        <ViewScrollHoriz>0</ViewScrollHoriz>
+        <ViewScrollVert>174</ViewScrollVert>
+        <Line>195</Line>
+        <Column>11</Column>
+        <SelectionStartLine>195</SelectionStartLine>
+        <SelectionStartColumn>1</SelectionStartColumn>
+        <SelectionEndLine>195</SelectionEndLine>
+        <SelectionEndColumn>11</SelectionEndColumn>
+      </ViewFrame>
+    </Document>
+    <Document>
+      <ViewFrame>
         <DocPathName>.\Heimdall4\Heimdall4.stxs</DocPathName>
-        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAADGGAAAAAJKCAAAAA</WindowPlacement>
+        <WindowPlacement>MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPDAAAAAAADAAAAAAAJGGAAAAAFHCAAAAA</WindowPlacement>
         <ViewScrollHoriz>1</ViewScrollHoriz>
         <ViewScrollVert>1</ViewScrollVert>
-        <Row>12</Row>
-        <Column>3</Column>
+        <Row>22</Row>
+        <Column>1</Column>
         <SelectionStartChar>0</SelectionStartChar>
         <SelectionEndChar>0</SelectionEndChar>
       </ViewFrame>
@@ -81,13 +95,13 @@
       <Location>Heimdall4/Program</Location>
     </Treenode>
     <Treenode>
+      <Location>Heimdall4/Program/Include</Location>
+    </Treenode>
+    <Treenode>
       <Location>Heimdall4/Declaration</Location>
     </Treenode>
     <Treenode>
       <Location>Heimdall4/Setup</Location>
-    </Treenode>
-    <Treenode>
-      <Location>Heimdall4/System Files</Location>
     </Treenode>
   </ExpandedTreenodes>
   <ExpandedTreeNodesHWM>

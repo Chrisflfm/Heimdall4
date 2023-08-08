@@ -21,7 +21,7 @@
       <Define Name="__WKSPDIR__ 'F:\My documents\My JetSymProjects\Heimdall4'" />
       <Define Name="__WKSPNAME__ 'Heimdall4'" />
       <Define Name="__CONTROLLER__ 'JC-340'" />
-      <Define Name="__FIRMWARE__ '1.29'" />
+      <Define Name="__FIRMWARE__ ''" />
       <Define Name="__TARGETPATH__ 'F:\My documents\My JetSymProjects\Heimdall4\Heimdall4\Release\Heimdall4.es3'" />
       <Define Name="__TARGETDIR__ 'F:\My documents\My JetSymProjects\Heimdall4\Heimdall4\Release'" />
       <Define Name="__TARGETNAME__ 'Heimdall4'" />
@@ -38,10 +38,10 @@
       <IncludeFile Name="Platforms.stxp" />
     </IncludeFiles>
     <Versions>
-      <Version Name="OSVER" Value="285" />
-      <Version Name="STXVER" Value="522" />
-      <Version Name="STDSYSVER" Value="257" />
-      <Version Name="PLATFORMVER" Value="264" />
+      <Version Name="OSVER" Value="256" />
+      <Version Name="STXVER" Value="256" />
+      <Version Name="STDSYSVER" Value="256" />
+      <Version Name="PLATFORMVER" Value="256" />
       <Version Name="COMPATIBLEVER" Value="256" />
     </Versions>
     <Options>

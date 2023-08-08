@@ -32,6 +32,11 @@
 					<Name>Include</Name>
 					<SystemGroup>2</SystemGroup>
 					<DocumentType>11</DocumentType>
+					<Files>
+						<File>
+							<Name>.\Variables.stxp</Name>
+						</File>
+					</Files>
 				</File>
 			</Files>
 		</File>

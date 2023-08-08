@@ -1,196 +1,5 @@
-Var
-// *********************In en outputs*********************************
-//Digitaal Input
-	ctV1Dicht:		Bool	at %IX 100000201; //Venster 1 dicht
-	ctV2Dicht:		Bool	at %IX 100000202; //Venster 2 dicht
-	ctV3Dicht:		Bool	at %IX 100000203; //Venster 3 dicht
-	ctV4Dicht:		Bool	at %IX 100000204; //Vensteer4 dicht
-	ctV5Dicht:		Bool	at %IX 100000205; //Venster 5 dicht
-	ctV6Dicht:		Bool	at %IX 100000206; //Venster 6 dicht
-	ctV7Dicht:		Bool	at %IX 100000207; //Venster 7 dicht
-	ctV8Dicht:		Bool	at %IX 100000208; //Venster 8 dicht
-	ctV9Dicht:		Bool	at %IX 100000209; //Venster 9 dicht
-	ctV10Dicht:		Bool	at %IX 100000210; //Venster 10 dicht
-	ctV11Dicht:		Bool	at %IX 100000211; //Venster 11 dicht
-	ctV12Dicht:		Bool	at %IX 100000212; //Venster 12 dicht
-	ctV13Dicht:		Bool	at %IX 100000213; //Venster 13 dicht
-	ctV14Dicht:		Bool	at %IX 100000214; //Venster 14 dicht
-	ctV15Dicht:		Bool	at %IX 100000215; //Venster 15 dicht
-	ctV16Dicht:		Bool	at %IX 100000216; //Venster 16 dicht
-	
-	ctV17Dicht:		Bool	at %IX 100000301; //Venster 17 dicht
-	ctV18Dicht:		Bool	at %IX 100000302; //Venster 18 dicht
-	ctRegen1:		Bool	at %IX 100000303; //Regensensor nr 1
-	ctRegen2:		Bool	at %IX 100000304; //Regensensor nr 2
-	ctSchemer:		Bool	at %IX 100000305; //Schemerschakelaar
-	ctAlarmAan:		Bool	at %IX 100000307; //Alarm ingeschakeld
-	ctAlarmUit:		Bool	at %IX 100000306; //Alarm uitgeschakeld
-	ctBrand:		Bool	at %IX 100000308; //Brand
-	ctInbraak:		Bool	at %IX 100000309; //Inbraak TOM
-	ctDeurPlatina:	Bool	at %IX 100000310; //Deur luifel Platina open
-	ctPoortDicht:	Bool	at %IX 100000311; //Buiten poort dicht
-	ctZoutLaag:		Bool	at %IX 100000312; //Laag zoutniveau ontharder
-	ctZoutVatLek:	Bool	at %IX 100000313; //Lek in zoutvat ontharder
-	Reserve1:		Bool	at %IX 100000314; //Reserve
-	Reserve2:		Bool	at %IX 100000315; //Reserve
-	ctpltnlmpAan:	Bool	at %IX 100000316; //
-	Mot24VOke:		Bool	at %IX 100000601; //24VDC2 motoren oke
-	
-	
-//Digitaal Output	
-	hrVenster1:		Bool	at %QX 100000401; //Venster 1 activeren
-	hrVenster2:		Bool	at %QX 100000402; //Venster 2 activeren
-	hrVenster3:		Bool	at %QX 100000403; //Venster 3 activeren
-	hrVenster4:		Bool	at %QX 100000404; //Venster 4 activeren
-	hrVenster5:		Bool	at %QX 100000405; //Venster 5 activeren
-	hrVenster6:		Bool	at %QX 100000406; //Venster 6 activeren
-	hrVenster7:		Bool	at %QX 100000407; //Venster 7 activeren
-	hrVenster8:		Bool	at %QX 100000408; //Venster 8 activeren
-	hrVenster9:		Bool	at %QX 100000409; //Venster 9 activeren
-	hrVenster10:	Bool	at %QX 100000410; //Venster 10 activeren
-	hrVenster11:	Bool	at %QX 100000411; //Venster 11 activeren
-	hrVenster12:	Bool	at %QX 100000412; //Venster 12 activeren
-	hrVenster13:	Bool	at %QX 100000413; //Venster 13 activeren
-	hrVenster14:	Bool	at %QX 100000414; //Venster 14 activeren
-	hrVenster15:	Bool	at %QX 100000415; //Venster 15 activeren
-	hrVenster16:	Bool	at %QX 100000416; //Venster 16 activeren
-	
-	hrVenster17:	Bool	at %QX 100000501; //Venster 17 activeren
-	hrVenster18:	Bool	at %QX 100000502; //Venster 18 activeren
-	hrZonnewering1:	Bool	at %QX 100000503; //Zonnewering 1 activeren
-	hrZonnewering3:	Bool	at %QX 100000504; //Zonnewering 1 activeren
-	hrZonnewering4:	Bool	at %QX 100000505; //Zonnewering 1 activeren
-	hrZonnewering5:	Bool	at %QX 100000506; //Zonnewering 1 activeren
-	hrZonnewering6:	Bool	at %QX 100000507; //Zonnewering 1 activeren
-	hrZonnewering12:Bool	at %QX 100000508; //Zonnewering 1 activeren
-	hrZonnewering13:Bool	at %QX 100000509; //Zonnewering 1 activeren
-	hrZonnewering15:Bool	at %QX 100000510; //Zonnewering 1 activeren
-	hrZonnewering16:Bool	at %QX 100000511;//Zonnewering 1 activeren
-	hrZonnewering17:Bool	at %QX 100000512;//Zonnewering 1 activeren
-	hrOpenDicht:	Bool	at %QX 100000513;//Polariteit omschakelen
-	hrLampenTom:	Bool	at %QX 100000514;//Lampen op terrein TOM
-	hrLampenPlatina:Bool	at %QX 100000515;//Lampen op terrein Platina + Industrieweg
-	hrPoortTom:		Bool	at %QX 100000516;//Poort Tom open/dicht
 
-	
-//**********************Programma variabelen en registers******************************
-
-// Flags
-	blLampenAan:			Bool	at %MX 1;	//Alle lampen aan
-	blLampen1Aan:			Bool	at %MX 2;	//Lampen kring 1 aan
-	blLampen2Aan:			Bool	at %MX 3;	//Lampen kring 2 aan
-	blLampen3Aan:			Bool	at %MX 4;	//Lampen kring 3 aan
-	blAlleVenstersDicht: 	Bool	at %MX 5;	//Alle dakvensters sluiten
-	blAlleVenstersOpen:		Bool	at %MX 6;	//Alle dakvensters openen
-	blAlleZonweerDicht: 	Bool	at %MX 7;	//Alle zonneweringen openen
-	blAlleZonweerOpen:		Bool	at %MX 8;	//Alle zonneweringen sluiten
-	blPulsPoort:			Bool	at %MX 9;	//Puls naar poort
-	blPoortTomIsOpen:		Bool	at %MX 10;	//poort is 's morgens opgestuurd
-	blPoortTom:				Bool	at %MX 11;	//flag voor output
-	blOpenDicht:			Bool	at %MX 12;	//Voor ompool relais
-	blTest:					Bool	at %MX 13;	//
-	blDroog:				Bool	at %MX 14;	//Voor pannel, het is droog buiten
-	blAutoLampenAan:		Bool	at %MX 15;	//True = lampen aan als schemerschakelaar aan
-	blManLampenAan:			Bool	at %MX 16;	//True = lampen aan in handbediening
-	blVenster1:				Bool	at %MX 18;	//flag voor task veiligheden
-	blVenster2:				Bool	at %MX 19;	//flag voor task veiligheden
-	blVenster3:				Bool	at %MX 20;	//flag voor task veiligheden
-	blVenster4:				Bool	at %MX 21;	//flag voor task veiligheden
-	blVenster5:				Bool	at %MX 22;	//flag voor task veiligheden
-	blVenster6:				Bool	at %MX 23;	//flag voor task veiligheden
-	blVenster7:				Bool	at %MX 24;	//flag voor task veiligheden
-	blVenster8:				Bool	at %MX 25;	//flag voor task veiligheden
-	blVenster9:				Bool	at %MX 26;	//flag voor task veiligheden
-	blVenster10:			Bool	at %MX 27;	//flag voor task veiligheden
-	blVenster11:			Bool	at %MX 28;	//flag voor task veiligheden
-	blVenster12:			Bool	at %MX 29;	//flag voor task veiligheden
-	blVenster13:			Bool	at %MX 30;	//flag voor task veiligheden
-	blVenster14:			Bool	at %MX 31;	//flag voor task veiligheden
-	blVenster15:			Bool	at %MX 32;	//flag voor task veiligheden
-	blVenster16:			Bool	at %MX 33;	//flag voor task veiligheden
-	blVenster17:			Bool	at %MX 34;	//flag voor task veiligheden
-	blVenster18:			Bool	at %MX 35;	//flag voor task veiligheden
-	blZonnewering1:			Bool	at %MX 36;	//flag voor task veiligheden
-	blZonnewering3:			Bool	at %MX 37;	//flag voor task veiligheden
-	blZonnewering4:			Bool	at %MX 38;	//flag voor task veiligheden
-	blZonnewering5:			Bool	at %MX 39;	//flag voor task veiligheden
-	blZonnewering6:			Bool	at %MX 40;	//flag voor task veiligheden
-	blZonnewering12:		Bool	at %MX 41;	//flag voor task veiligheden
-	blZonnewering13:		Bool	at %MX 42;	//flag voor task veiligheden
-	blZonnewering15:		Bool	at %MX 43;	//flag voor task veiligheden
-	blZonnewering16:		Bool	at %MX 44;	//flag voor task veiligheden
-	blZonnewering17:		Bool	at %MX 45;	//flag voor task veiligheden
-	blLampenTom:			Bool	at %MX 46;	//flag voor task veiligheden
-	blLampenPlatina:		Bool	at %MX 47;	//flag voor task veiligheden
-	blSetClock:				Bool	at %MX 48;	//set realtime clock
-	blVentilatie:			Bool	at %MX 49;	//vantilatie aan uit voor paneel
-	blklepToe:				Bool	at %MX 50;	//alles dicht aan uit voor paneel
-	res51:					Bool	at %MX 51;	//
-	blRegen:				Bool	at %MX 52;	//flag voor task veiligheden
-	blPoort:				Bool	at %MX 53;	//flag voor task veiligheden
-	blVensterDicht: 		Bool	at %MX 54;	//Alle dakvensters sluiten
-	blVensterOpen:			Bool	at %MX 55;	//Alle dakvensters openen
-	blZonweerDicht: 		Bool	at %MX 56;	//Alle zonneweringen openen
-	blZonweerOpen:			Bool	at %MX 57;	//Alle zonneweringen sluiten
-	blLicht:				Bool	at %MX 58;	//Voor pannel, het is licht buiten
-	blDonker:				Bool	at %MX 59;	//Voor pannel, het is donker buiten
-	blnoAlarm:				Bool	at %MX 60;	//Voor pannel, er is geen alarm
-	blAlarm:				Bool	at %MX 61;	//Voor pannel, er is alarm
-	blAlleVenstersToe:		Bool	at %MX 62;	//vereenvoudeging
-	blPoolOm:				Bool	at %MX 63;	//vereenvoudeging
-	blNotAlarmAan:			Bool	at %MX 64;	//vereenvoudeging
-	blNotAlarmUit:			Bool	at %MX 65;	//vereenvoudeging
-	blNotBrand:				Bool	at %MX 66;	//vereenvoudeging
-	blNotInbraak:			Bool	at %MX 67;	//vereenvoudeging
-	blNotDeurPlatina:		Bool	at %MX 68;	//vereenvoudeging
-	blWaiting:				Bool;
-	blPoort30MinPauze:		Bool;
-	
-//Register numbers: 1000000 ... 1001999
-// Registers
-	regActivatietijdvnstr:	Int		at %vl 1000000; //Tijd nodig om venster te openen of sluiten
-	regActivatietijdzon:	Int		at %vl 1000001; //Tijd nodig om zonnewering te openen of sluiten
-	regVensterNr:			Int		at %vl 1000002; //Nr van het venster dat gecomandeerd wordt
-	regZonweerNr:			Int		at %vl 1000003; //Nr van de zonnewering die gecomandeerd wordt
-	regVensterComm:			Int		at %vl 1000004; //Commando van het venster dat gecomandeerd wordt 0 = stop 1 = open 2 = dicht
-	regZonweerComm:			Int		at %vl 1000005; //Commando van de zonnewering die gecomandeerd wordt 0 = stop 1 = open 2 = dicht
-	regUurLampAan:			Int		at %vl 1000006; //
-	regUurLampUit:			Int		at %vl 1000007; //
-	regMinLampAan:			Int		at %vl 1000008; //
-	regMinLampUit:			Int		at %vl 1000009; //
-	regUurPoortOpen:		Int		at %vl 1000010; //
-	regMinPoortOpen:		Int		at %vl 1000011; //
-	regAantDagPoortToe:		Int		at %vl 1000012; //
-	regHours:				Int		at %vl 1000013; //
-	regMinutes:				Int		at %vl 1000014; //
-	regSeconds:				Int		at %vl 1000015; //
-//**********************RTC**********************************************
-	Milliseconds:			Int		at %vl 102910; //
-	Seconds:				Int		at %vl 102911; //
-	Minutes:				Int		at %vl 102912; //
-	Hours:					Int		at %vl 102913; //
-	Weekday:				Int		at %vl 102914; //Weekday (0 = Sunday)
-	Day:					Int		at %vl 102915; //
-	Month:					Int		at %vl 102916; //
-	Year:					Int		at %vl 102917; //
-	
-//**********************Fouten*******************************************
-	Ft01_ZoutniveauLaag:	Bool	at %MX 100;//Zout niveau in ontharder laag
-	Ft02_GeenComunicatie:	Bool	at %MX 101;//Geen comuinicatie met Heimdall
-	Ft03_Brand:				Bool	at %MX 102;//Brand alarm bij TOM
-	Ft04_Inbraak:			Bool	at %MX 103;//Inbraak alarm bij TOM
-	Ft05_DeurPlatinaOpen:	Bool	at %MX 104;//Deur naar leufel Platina open
-	Ft06_WaterlekZoutvat:	Bool	at %MX 105;//Water in lekbak ontharder
-	Ft07_24VDCMotoren:		Bool	at %MX 106;//fout voeding motoren
-
-//**********************Timers********************************************
-	stVensters: 			Timer;
-	stPoortPuls: 			Timer;
-	stPoortOpen: 			Timer;
-	stRegenSensor:			Timer;
-
-End_var
-
+#Include "Variables.stxp"
 
 Task tMain Autorun
 //Init
@@ -279,6 +88,16 @@ Task tMain Autorun
 	Ft04_Inbraak := False;
 	Ft05_DeurPlatinaOpen := False;
 	Ft06_WaterlekZoutvat := False;
+	
+	regRebootCounter := regRebootCounter+1;
+	
+	
+//*************************************Lampen aan zonder wacht als donker en alarm uit**********
+	if ctSchemer and ctAlarmUit then
+			blLampenPlatina := True;
+			blLampenTom := True;
+	end_if
+	
 //**************************************Start Main loop**************************************
 	While True Do
 
@@ -519,16 +338,19 @@ Task tMain Autorun
 
 //*************************************sturing Lampen**********************************************
 				
-		
+		//output is enekel floag tom en flag Platina
 		If blLampen1Aan then
+			//19A
 			blManLampenAan := True
 	 	End_If;
 	
 		If blLampen2Aan or blLampen3Aan then
+			//19B (platina)
 			blManLampenAan := True;
 		End_If;
 		
 		If blLampenAan then
+			//alle lampen
 			blManLampenAan := True
 	 	End_If;
 	
@@ -536,29 +358,37 @@ Task tMain Autorun
 			blManLampenAan := False
 		End_If;
 		
-		if Hours >= regUurLampAan and Minutes >= regMinLampAan then
+		aanTijd := regUurLampAan+(regMinLampAan/100.0);
+		uitTijd := regUurLampUit+(regMinLampUit/100.0);
+		actueleTijd := Hours+(Minutes/100.0);
+		
+		if actueleTijd >= aanTijd then
 			blAutoLampenAan := true;
 		End_If;
 
-		if Hours >= regUurLampUit and Minutes >= regMinLampUit then
+		if actueleTijd >= uitTijd or actueleTijd < aanTijd then
 			blAutoLampenAan := False;
-			blManLampenAan := False
 		End_If;
 	
-		if (blAutoLampenAan and ctSchemer) or (ctSchemer and ctAlarmUit) or (ctSchemer and not ctPoortDicht) or blLampen1Aan then
+		if blLampen1Aan or (blAutoLampenAan and ctSchemer and ctAlarmUit) Then
 			blLampenTom := True;
-		else
-			blLampenTom := False;
-		End_if;
-	
+		End_If
 		
-		if (ctpltnlmpAan and ctSchemer) or blLampen2Aan or blLampen3Aan Then
+		if blLampen2Aan or blLampen3Aan or (blAutoLampenAan and ctSchemer and ctAlarmUit) Then
 			blLampenPlatina := True;
-		else
-			blLampenPlatina := False;
+		End_If	
 			
-		End_If;
+		if  not ctAlarmUit then
+			TimerStart(stLampenTimer,T#15m);
+		end_if
+				
+		if not blLampen1Aan and (not blAutoLampenAan or not ctSchemer or (not ctAlarmUit and timerend(stLampenTimer))) then
+			blLampenTom := False;
+		End_If
 		
+		if not blLampen2Aan and not blLampen3Aan and (not blAutoLampenAan or not ctSchemer or (not ctAlarmUit and timerend(stLampenTimer))) Then
+			blLampenPlatina := False;
+		end_if
 //*************************************Sturing Poort**********************************************
 	
 		if (Hours >= regUurPoortOpen and Minutes >= regMinPoortOpen and Weekday > 0 and Weekday < 7 and ctPoortDicht and not blPoortTomIsOpen) then
@@ -566,7 +396,7 @@ Task tMain Autorun
 				blPoort := True;
 				blPoortTomIsOpen := True;
 				TimerStart(stPoortOpen,T#30m);//regActivatietijdzonweer);// Timer is set to 30m and started.
-				blPoort30MinPauze = True;
+				blPoort30MinPauze := True;
 			else
 				 regAantDagPoortToe :=  regAantDagPoortToe - 1;
 			End_if;
@@ -704,22 +534,22 @@ Task tVeiligheden Autorun
 			hrVenster6 := True;
 		End_If;		
 		if not blVenster7 then
-			hrVenster7 := False;
+			//hrVenster7 := False;
 		End_If;		
 		if (blVenster7 and not hrOpenDicht) or (blVenster7 and hrOpenDicht ) then
-			hrVenster7 := True;
+			//hrVenster7 := True;
 		End_If;		
 		if not blVenster8 then
-			hrVenster8 := False;
+			//hrVenster8 := False;
 		End_If;		
 		if (blVenster8 and not hrOpenDicht) or (blVenster8 and hrOpenDicht) then
-			hrVenster8 := True;
+			//hrVenster8 := True;
 		End_If;		
 		if not blVenster9 then
-			hrVenster9 := False;
+			//hrVenster9 := False;
 		End_If;		
 		if (blVenster9 and not hrOpenDicht) or (blVenster9 and hrOpenDicht ) then
-			hrVenster9 := True;
+			//hrVenster9 := True;
 		End_If;		
 		if not blVenster10 then
 			hrVenster10 := False;
@@ -839,13 +669,13 @@ Task tVeiligheden Autorun
 		End_If;		
 				
 //Lampen 
-		if blLampenPlatina or blLampenAan then
+		if blLampenPlatina then
 			hrLampenPlatina := true;
 		else
 			hrLampenPlatina := false;
 		End_If;
 	
-		if blLampenTom  or blLampenAan then
+		if blLampenTom then
 			hrLampenTom := true;
 		else
 			hrLampenTom := false;
@@ -858,6 +688,155 @@ Task tVeiligheden Autorun
 			hrPoortTom := False;
 		End_If;
 
+	End_While;
+
+End_Task
+
+Task tPython Autorun
+//*************************************Python****************************************
+	While True Do
+	 // self.wensRegime  0 =uit, -1 = koelen 1 = verwarmen 2=automatisch warm -2 = automatisch koel
+		if ctAlarmUit then
+			
+			if flGroep2 then 
+				Groep2kleur := 1;
+			else
+				Groep2kleur := 2;
+			End_If
+		
+			if flGroep7 then 
+				Groep7kleur := 1;
+			else
+				Groep7kleur := 2;
+			End_If
+		
+			if flGroep8 then 
+				Groep8kleur := 1;
+			else
+				Groep8kleur := 2;
+			End_If
+		
+			if flGroep9 then 
+				Groep9kleur := 1;
+			else
+				Groep9kleur := 2;
+			End_If
+		
+			if flGroep12 then 
+				Groep12kleur := 1;
+			else
+				Groep12kleur := 2;
+			End_If
+	
+	//*****************Modus	
+		
+		if flGroep2AanUit then	
+			if flGroep2 then
+				if flGroep2VVofConv then			
+					Groep3Modus := 2;
+					Groep4Modus := 2;
+					Groep5Modus := 2;
+					Groep11Modus := 2;
+				else
+					Groep3Modus := 1;
+					Groep4Modus := 1;
+					Groep5Modus := 1;
+					Groep11Modus := 1;
+				end_if
+			else			
+				Groep3Modus := -2;
+				Groep4Modus := -2;
+				Groep5Modus := -2;
+				Groep11Modus := -2;
+			End_If
+		else
+				Groep3Modus := 0;
+				Groep4Modus := 0;
+				Groep5Modus := 0;
+				Groep11Modus := 0;
+				Groep2kleur := 0;
+		End_If
+	
+		if flGroep7AanUit then		
+			if flGroep7 then 
+				Groep7Modus := 1;
+			else
+				Groep7Modus := -1;
+			End_If
+		else
+				Groep7Modus := 0;
+		End_If
+		
+		if flGroep8AanUit then		
+			if flGroep8 then 			
+				Groep1Modus := 1;
+				Groep2Modus := 1;
+			else			
+				Groep1Modus := -1;
+				Groep2Modus := -1;
+			End_If
+		else
+					Groep1Modus := 0;
+				Groep2Modus := 0;
+		End_If
+	
+		if flGroep9AanUit then		
+			if flGroep9 then 
+				if flGroep9VVofConv then			
+					Groep9Modus := 2;
+					Groep8Modus := 2;
+					Groep10Modus := 2;
+				else
+					Groep9Modus := 1;
+					Groep8Modus := 1;
+					Groep10Modus := 1;
+				End_If
+			else
+				Groep9Modus := -2;
+				Groep8Modus := -2;
+				Groep10Modus := -2;
+			End_If
+		else
+				Groep9Modus := 0;
+				Groep8Modus := 0;
+				Groep10Modus := 0;
+		End_If
+	
+		if flGroep12AanUit then			
+			if flGroep12 then 
+				if flGroep12VVofConv then			
+					Groep12Modus := 2;
+					Groep13Modus := 2;
+					Groep15Modus := 2;
+					Groep17Modus := 2;
+				else
+					Groep12Modus := 1;
+					Groep13Modus := 1;
+					Groep15Modus := 1;
+					Groep17Modus := 1;
+				End_If
+			else
+				Groep12Modus := -2;
+				Groep13Modus := -2;
+				Groep15Modus := -2;
+				Groep17Modus := -2;
+			End_If
+		else
+			Groep12Modus := 0;
+			Groep13Modus := 0;
+			Groep15Modus := 0;
+			Groep17Modus := 0;
+		End_If
+		
+	else
+		Groep2kleur := 0;
+		Groep7kleur := 0;
+		Groep8kleur := 0;
+		Groep9kleur := 0;
+		Groep12kleur := 0;
+	End_If
+		
+				
 	End_While;
 
 End_Task
